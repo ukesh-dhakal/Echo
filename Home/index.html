@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./vars.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src='https://cdn.tailwindcss.com/3.2.0' ></script>
+  <script src="./tailwind.config.js"></script>
+  <style>
+   a,
+   button,
+   input,
+   select,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+       border: none;
+       text-decoration: none;
+       background: none;
+   
+       -webkit-font-smoothing: antialiased;
+   }
+   
+   menu, ol, ul {
+       list-style-type: none;
+       margin: 0;
+       padding: 0;
+   }
+   </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="bg-primary-bg h-[4220px] relative overflow-hidden">
+    <img
+      class="w-[100%] h-[auto] absolute right-[0%] left-[0%] top-0 overflow-visible"
+      src="mask-group0.svg"
+    />
+    <div
+      class="bg-[rgba(17,16,19,0.24)] pt-6 pr-[60px] pb-6 pl-[60px] w-[100%] h-[90px] absolute right-[0%] left-[0%] top-0"
+    >
+      <div
+        class="flex flex-row gap-3 items-center justify-start absolute left-[60px] top-6"
+      >
+        <img
+          class="shrink-0 w-[86.71px] h-[42px] relative"
+          style="object-fit: cover"
+          src="echo-creations-logo-copy-10.png"
+        />
+        <img
+          class="shrink-0 w-44 h-8 relative"
+          style="object-fit: cover"
+          src="echo-creations-logo-copy-20.png"
+        />
+      </div>
+      <div
+        class="flex flex-row gap-8 items-center justify-start absolute left-[50%] top-[34px]"
+        style="translate: -50%"
+      >
+        <a
+  href="#"
+  class="text-[#ffffff] text-left font-semibold-18-font-family text-semibold-18-font-size font-semibold-18-font-weight relative"
+>
+  Home
+</a>
+<a
+  href="../About/index.html"
+  class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+>
+  About
+</a>
+<a
+  href="../Services-Single/index.html"
+  class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+>
+  Ankur’s Podcast
+</a>
+<a
+  href="../Servics/index.html"
+  class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+>
+  Services
+</a>
+<a
+  href="../Contact/index.html"
+  class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+>
+  Contact
+</a>
+
+<script>
+  const currentPath = window.location.pathname;
+
+  document.querySelectorAll('a').forEach(link => {
+    const href = link.getAttribute('href');
+
+    // Normalize both paths for comparison
+    const linkPath = new URL(href, window.location.origin).pathname;
+
+    if (currentPath.endsWith(linkPath)) {
+      link.classList.remove('text-secondary');
+      link.classList.add(
+        'text-[#ffffff]',
+        'font-semibold',
+      
+        'decoration-2',
+        'decoration-[#ffffff]'
+      );
+    } else {
+      link.classList.add('text-gray-400', 'hover:text-[#ffffff]', 'transition-colors');
+    }
+  });
+</script>
+
+
+      </div>
+      <div
+        class="bg-secondary rounded-[50px] pt-[9px] pr-6 pb-[9px] pl-6 flex flex-row gap-1 items-center justify-start absolute right-[60px] top-6"
+      >
+        <div
+          class="flex flex-row gap-1 items-center justify-start shrink-0 relative"
+        >
+          <div
+            class="text-[#ffffff] text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height font-body-16-font-weight relative"
+          >
+            Let’s Talk
+          </div>
+          <img
+            class="shrink-0 w-[21.34px] h-3 relative overflow-visible"
+            src="formkit-arrowright0.svg"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col gap-11 items-start justify-start w-[1184px] absolute left-[calc(50%_-_596px)] top-56"
+    >
+      <div
+        class="pl-2 flex flex-col gap-6 items-start justify-start self-stretch shrink-0 relative"
+      >
+        <div
+          class="text-secondary text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
+        >
+          Echo Creations
+        </div>
+        <div
+          class="text-left font-['Urbanist-SemiBold',_sans-serif] text-7xl leading-[84px] font-semibold relative"
+        >
+          <span>
+            <span class="crafting-stories-precising-in-media-craftsmanship-span text-white">
+              Crafting Stories
+              <br />
+              Precising in
+            </span>
+            <span class="crafting-stories-precising-in-media-craftsmanship-span2 text-gray-400">
+              Media Craftsmanship
+            </span>
+          </span>
+        </div>
+      </div>
+      <div
+        class="flex flex-row items-start justify-between self-stretch shrink-0 relative"
+      >
+        <div
+          class="rounded-[50px] flex flex-row gap-1 items-end justify-end shrink-0 w-[190px] h-[58px] relative"
+        >
+          <div class="shrink-0 w-[186.34px] h-[54px] static">
+            <div
+              class="rounded-[50px] border-solid border-button-fill border pt-4 pr-11 pb-4 pl-11 flex flex-row gap-1 items-center justify-start w-[186.34px] absolute left-[3.66px] top-1"
+            >
+              <div
+                class="text-[#ffffff] text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+              >
+                Let’s Talk
+              </div>
+              <img
+                class="shrink-0 w-[21.34px] h-3 relative overflow-visible"
+                src="formkit-arrowright1.svg"
+              />
+            </div>
+            <div
+              class="bg-button-fill rounded-[50px] pt-4 pr-11 pb-4 pl-11 flex flex-row gap-1 items-center justify-start w-[186.34px] absolute left-[3.66px] top-1"
+            >
+              <div
+                class="text-[#ffffff] text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+              >
+                Let’s Talk
+              </div>
+              <img
+                class="shrink-0 w-[21.34px] h-3 relative overflow-visible"
+                src="formkit-arrowright2.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          class="text-secondary text-left font-text-des-20-font-family text-text-des-20-font-size leading-text-des-20-line-height font-text-des-20-font-weight relative w-[576px]"
+        >
+          Neque elementum vestibulum at egestas pellentesque habitant faucibus.
+          Iaculis dignissim enim ac ut augue maecenas pulvinar enim dolor.
+        </div>
+      </div>
+    </div>
+    <div
+      class="rounded-2xl flex flex-row gap-0 items-center justify-start absolute left-[50%] top-[712px] overflow-hidden"
+      style="translate: -50%"
+    >
+      <div
+        class="flex flex-row gap-2.5 items-center justify-start shrink-0 w-[294px] h-[294px] relative"
+      >
+        <img
+          class="shrink-0 w-[100%] h-[294px] absolute right-[0%] left-[0%] top-0 overflow-visible"
+          src="mask-group1.svg"
+        />
+        <div
+          class="p-4 flex flex-col items-start justify-between self-stretch flex-1 relative"
+        >
+          <div
+            class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
+          >
+            01
+          </div>
+          <div
+            class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative"
+          >
+            <div
+              class="text-[#ffffff] text-left font-title-20-font-family text-title-20-font-size leading-title-20-line-height font-title-20-font-weight relative self-stretch"
+            >
+              Podcasts
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-row gap-2.5 items-center justify-start shrink-0 w-[294px] h-[294px] relative"
+      >
+        <img
+          class="shrink-0 w-[100%] h-[294px] absolute right-[0%] left-[0%] top-0 overflow-visible"
+          src="mask-group2.svg"
+        />
+        <div
+          class="p-4 flex flex-col items-start justify-between self-stretch flex-1 relative"
+        >
+          <div
+            class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
+          >
+            02
+          </div>
+          <div
+            class="text-[#ffffff] text-left font-title-20-font-family text-title-20-font-size leading-title-20-line-height font-title-20-font-weight relative self-stretch"
+          >
+            Documentaries
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-row gap-2.5 items-center justify-start shrink-0 w-[294px] h-[294px] relative"
+      >
+        <img
+          class="shrink-0 w-[100%] h-[294px] absolute right-[0%] left-[0%] top-0 overflow-visible"
+          src="mask-group3.svg"
+        />
+        <div
+          class="p-4 flex flex-col items-start justify-between self-stretch flex-1 relative"
+        >
+          <div
+            class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
+          >
+            03
+          </div>
+          <div
+            class="text-[#ffffff] text-left font-title-20-font-family text-title-20-font-size leading-title-20-line-height font-title-20-font-weight relative self-stretch"
+          >
+            Photography
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-row gap-2.5 items-center justify-start shrink-0 w-[294px] h-[294px] relative"
+      >
+        <img
+          class="shrink-0 w-[100%] h-[294px] absolute right-[0%] left-[0%] top-0 overflow-visible"
+          src="mask-group4.svg"
+        />
+        <div
+          class="p-4 flex flex-col items-start justify-between self-stretch flex-1 relative"
+        >
+          <div
+            class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
+          >
+            04
+          </div>
+          <div
+            class="text-[#ffffff] text-left font-title-20-font-family text-title-20-font-size leading-title-20-line-height font-title-20-font-weight relative self-stretch"
+          >
+            Filmmaking
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col gap-8 items-start justify-start w-[1176px] absolute left-[50%] top-[1106px]"
+      style="translate: -50%"
+    >
+      <div
+        class="flex flex-row gap-[55px] items-center justify-start self-stretch shrink-0 relative"
+      >
+        <div
+          class="text-[#ffffff] text-left font-section-heading-font-family text-section-heading-font-size leading-section-heading-line-height font-section-heading-font-weight relative"
+        >
+          Featured
+        </div>
+      </div>
+      <div
+        class="p-8 flex flex-col gap-2.5 items-start justify-end self-stretch shrink-0 h-[662px] relative"
+      >
+        <img
+          class="shrink-0 w-[1176px] h-[662px] absolute left-0 top-0 overflow-visible"
+          src="mask-group5.svg"
+        />
+        <div
+          class="flex flex-col gap-4 items-start justify-start shrink-0 w-[204px] relative"
+        >
+          <div
+            class="text-[#ffffff] text-left font-text-32-font-family text-text-32-font-size font-text-32-font-weight relative"
+          >
+            Ankur’s Podcast
+          </div>
+          <div
+            class="flex flex-col gap-4 items-start justify-start self-stretch shrink-0 h-[42px] relative overflow-hidden"
+          >
+            <div
+              class="flex flex-row gap-3 items-center justify-start self-stretch shrink-0 h-[42px] relative"
+            >
+              <div
+                class="rounded-[50px] border-solid border-[#ffffff] border pt-[7px] pr-4 pb-[7px] pl-4 flex flex-row gap-2.5 items-center justify-center shrink-0 relative"
+              >
+                <div
+                  class="text-[#ffffff] text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative"
+                >
+                  Podcast
+                </div>
+              </div>
+              <div
+                class="rounded-[50px] border-solid border-[#ffffff] border pt-[7px] pr-4 pb-[7px] pl-4 flex flex-row gap-2.5 items-center justify-center shrink-0 relative"
+              >
+                <div
+                  class="text-[#ffffff] text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative"
+                >
+                  Insights
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex flex-row gap-2 items-center justify-start shrink-0 h-[42px] relative"
+            >
+              <div
+                class="text-[#ffffff] text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+              >
+                Know More
+              </div>
+              <div
+                class="border-solid border-[#ffffff] border-t border-r-[0] border-b-[0] border-l-[0] shrink-0 w-6 h-0 relative"
+                style="margin-top: -1px"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col gap-8 items-start justify-start w-[1176px] absolute left-[50%] top-[1956px]"
+      style="translate: -50%"
+    >
+      <div
+        class="flex flex-col gap-6 items-start justify-start self-stretch shrink-0 relative"
+      >
+        <div
+          class="text-left font-section-heading-font-family text-section-heading-font-size leading-section-heading-line-height font-section-heading-font-weight relative self-stretch"
+        >
+          <span>
+            <span
+              class="laoreet-eget-diam-lobortis-maecenas-ut-nunc-aenean-sed-enim-viverra-amet-condimentum-velit-span"
+            >
+              Laoreet eget diam lobortis maecenas. Ut nunc aenean sed enim viverra
+              amet
+            </span>
+            <span
+              class="laoreet-eget-diam-lobortis-maecenas-ut-nunc-aenean-sed-enim-viverra-amet-condimentum-velit-span2"
+            >
+              condimentum velit.
+            </span>
+          </span>
+        </div>
+        <div
+          class="text-[#ffffff] text-left font-text-des-20-font-family text-text-des-20-font-size leading-text-des-20-line-height font-text-des-20-font-weight relative w-[876px]"
+        >
+          Fringilla sed tincidunt purus est elementum id quam nulla aliquet. Non
+          urna tellus morbi sed enim donec condimentum enim in. Sed ac phasellus
+          tristique sed cras vitae cras ac nunc.
+        </div>
+      </div>
+      <div
+        class="rounded-[50px] border-solid border-secondary border pt-4 pr-11 pb-4 pl-11 flex flex-row gap-1 items-center justify-start shrink-0 relative"
+      >
+        <div
+          class="flex flex-row gap-1 items-center justify-start shrink-0 relative"
+        >
+          <div
+            class="text-[#ffffff] text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+          >
+            About Us
+          </div>
+          <img
+            class="shrink-0 w-[21.34px] h-3 relative overflow-visible"
+            src="formkit-arrowright3.svg"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="bg-bg-2 pt-[100px] pr-[132px] pb-[100px] pl-[132px] flex flex-col gap-2.5 items-center justify-start w-[100%] absolute right-[0%] left-[0%] top-[2342px]"
+    >
+      <div
+        class="flex flex-col gap-[52px] items-center justify-start shrink-0 relative"
+      >
+        <div
+          class="text-[#ffffff] text-center font-section-heading-font-family text-section-heading-font-size leading-section-heading-line-height font-section-heading-font-weight relative self-stretch"
+        >
+          What they’re saying
+        </div>
+        <div
+          class="flex flex-row gap-6 items-center justify-start self-stretch shrink-0 relative"
+        >
+          <div
+            class="flex flex-col items-start justify-between shrink-0 w-[376px] h-[352px] relative"
+          >
+            <img
+              class="rounded-none shrink-0 w-[376px] h-[352px] absolute left-0 top-0 overflow-visible"
+              src="subtract0.svg"
+            />
+            <div
+              class="p-6 flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative"
+            >
+              <img
+                class="shrink-0 w-11 h-11 relative overflow-visible"
+                src="fa-solid-quote-left0.svg"
+              />
+              <div
+                class="text-[#ffffff] text-left font-text-des-20-font-family text-text-des-20-font-size leading-text-des-20-line-height font-text-des-20-font-weight relative self-stretch"
+              >
+                A tristique diam nunc consectetur laoreet nisl donec malesuada.
+                Venenatis purus aliquet consequat nam eget faucibus molestie.
+              </div>
+            </div>
+            <div
+              class="pt-4 pr-4 pb-4 flex flex-row gap-3 items-center justify-start shrink-0 h-[88px] relative"
+            >
+              <img
+                class="shrink-0 w-[60px] h-[60px] relative overflow-visible"
+                src="mask-group6.svg"
+              />
+              <div
+                class="flex flex-col gap-2 items-start justify-start shrink-0 relative"
+              >
+                <div
+                  class="text-[#ffffff] text-left font-title-20-font-family text-title-20-font-size leading-title-20-line-height font-title-20-font-weight relative"
+                >
+                  Miguel Keeling
+                </div>
+                <div
+                  class="text-[#ffffff] text-left font-body-14-font-family text-body-14-font-size leading-body-14-line-height font-body-14-font-weight relative"
+                >
+                  District Officer
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-start justify-between shrink-0 w-[376px] h-[352px] relative"
+          >
+            <img
+              class="rounded-none shrink-0 w-[376px] h-[352px] absolute left-0 top-0 overflow-visible"
+              src="subtract1.svg"
+            />
+            <div
+              class="p-6 flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative"
+            >
+              <img
+                class="shrink-0 w-11 h-11 relative overflow-visible"
+                src="fa-solid-quote-left1.svg"
+              />
+              <div
+                class="text-[#ffffff] text-left font-text-des-20-font-family text-text-des-20-font-size leading-text-des-20-line-height font-text-des-20-font-weight relative self-stretch"
+              >
+                Neque sollicitudin neque sit placerat. Tellus eu fermentum
+                volutpat fermentum sit facilisis in. Blandit eros massa sit
+                bibendum viverra mauris enim donec praesent.
+              </div>
+            </div>
+            <div
+              class="pt-4 pr-4 pb-4 flex flex-row gap-3 items-center justify-start shrink-0 h-[88px] relative"
+            >
+              <img
+                class="shrink-0 w-[60px] h-[60px] relative overflow-visible"
+                src="mask-group7.svg"
+              />
+              <div
+                class="flex flex-col gap-2 items-start justify-start shrink-0 relative"
+              >
+                <div
+                  class="text-[#ffffff] text-left font-title-20-font-family text-title-20-font-size leading-title-20-line-height font-title-20-font-weight relative"
+                >
+                  Moses Zieme
+                </div>
+                <div
+                  class="text-[#ffffff] text-left font-body-14-font-family text-body-14-font-size leading-body-14-line-height font-body-14-font-weight relative"
+                >
+                  Forward Tactics Specialist
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex flex-col items-start justify-between shrink-0 w-[376px] h-[352px] relative"
+          >
+            <img
+              class="rounded-none shrink-0 w-[376px] h-[352px] absolute left-0 top-0 overflow-visible"
+              src="subtract2.svg"
+            />
+            <div
+              class="p-6 flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative"
+            >
+              <img
+                class="shrink-0 w-11 h-11 relative overflow-visible"
+                src="fa-solid-quote-left2.svg"
+              />
+              <div
+                class="text-[#ffffff] text-left font-text-des-20-font-family text-text-des-20-font-size leading-text-des-20-line-height font-text-des-20-font-weight relative self-stretch"
+              >
+                Eu feugiat malesuada lorem in fermentum lorem mi ut. Lorem
+                interdum id odio morbi. Scelerisque purus non nec curabitur risus
+                nibh.
+              </div>
+            </div>
+            <div
+              class="pt-4 pr-4 pb-4 flex flex-row gap-3 items-center justify-start shrink-0 h-[88px] relative"
+            >
+              <img
+                class="shrink-0 w-[60px] h-[60px] relative overflow-visible"
+                src="mask-group8.svg"
+              />
+              <div
+                class="flex flex-col gap-2 items-start justify-start shrink-0 relative"
+              >
+                <div
+                  class="text-[#ffffff] text-left font-title-20-font-family text-title-20-font-size leading-title-20-line-height font-title-20-font-weight relative"
+                >
+                  Daisy Lowe
+                </div>
+                <div
+                  class="text-[#ffffff] text-left font-body-14-font-family text-body-14-font-size leading-body-14-line-height font-body-14-font-weight relative"
+                >
+                  Human Brand Officer
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-row gap-1 items-center justify-start shrink-0 relative"
+        >
+          <div class="bg-secondary rounded shrink-0 w-4 h-1 relative"></div>
+          <div class="bg-button-fill rounded shrink-0 w-4 h-1 relative"></div>
+          <div class="bg-button-fill rounded shrink-0 w-4 h-1 relative"></div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex flex-col gap-8 items-start justify-start w-[1176px] absolute left-[50%] top-[3158px]"
+      style="translate: -50%"
+    >
+      <div
+        class="flex flex-col items-center justify-between self-stretch shrink-0 relative"
+      >
+        <div
+          class="text-[#ffffff] text-left font-section-heading-font-family text-section-heading-font-size leading-section-heading-line-height font-section-heading-font-weight relative"
+        >
+          Latest Insights
+        </div>
+        <div
+          class="rounded-[50px] border-solid border-secondary border pt-4 pr-11 pb-4 pl-11 flex flex-row gap-1 items-center justify-start shrink-0 relative"
+        >
+          <div
+            class="flex flex-row gap-1 items-center justify-start shrink-0 relative"
+          >
+            <div
+              class="text-[#ffffff] text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+            >
+              View All
+            </div>
+            <img
+              class="shrink-0 w-[21.34px] h-3 relative overflow-visible"
+              src="formkit-arrowright4.svg"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-row gap-6 items-center justify-start self-stretch shrink-0 relative"
+      >
+        <div
+          class="flex flex-col gap-6 items-start justify-start shrink-0 w-[376px] relative"
+        >
+          <img
+            class="shrink-0 w-[376px] h-[212px] relative overflow-visible"
+            src="mask-group9.svg"
+          />
+          <div
+            class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative"
+          >
+            <div
+              class="text-secondary text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height font-body-16-font-weight relative self-stretch"
+            >
+              December 13, 2024
+            </div>
+            <a href="../Insights-Single/index.html"
+              class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
+            >
+              Why Podcasts Are the Future of Storytelling and Branding
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-6 items-start justify-start shrink-0 w-[376px] relative"
+        >
+          <img
+            class="shrink-0 w-[376px] h-[212px] relative overflow-visible"
+            src="mask-group10.svg"
+          />
+          <div
+            class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative"
+          >
+            <div
+              class="text-secondary text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height font-body-16-font-weight relative self-stretch"
+            >
+              December 13, 2024
+            </div>
+            <div
+              class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
+            >
+              A Day in the Life of a Media Creation Studio
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col gap-6 items-start justify-start shrink-0 w-[376px] relative"
+        >
+          <img
+            class="shrink-0 w-[376px] h-[212px] relative overflow-visible"
+            src="mask-group11.svg"
+          />
+          <div
+            class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative"
+          >
+            <div
+              class="text-secondary text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height font-body-16-font-weight relative self-stretch"
+            >
+              December 13, 2024
+            </div>
+            <div
+              class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
+            >
+              Behind the Lens: The Art of Storytelling Through Photography
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="border-solid border-secondary border-t pt-[100px] pr-[132px] pb-8 pl-[132px] flex flex-col gap-[60px] items-center justify-start w-[100%] absolute right-[0%] left-[0%] top-[3677px]"
+    >
+      <div
+        class="flex flex-col gap-[60px] items-center justify-start shrink-0 w-[776px] relative"
+      >
+        <div
+          class="flex flex-col gap-8 items-center justify-start self-stretch shrink-0 relative"
+        >
+          <div
+            class="text-[#ffffff] text-center font-section-heading-font-family text-section-heading-font-size leading-section-heading-line-height font-section-heading-font-weight relative self-stretch"
+          >
+            Create. Inspire. Subscribe.
+          </div>
+          <div
+            class="flex flex-row gap-0 items-center justify-start self-stretch shrink-0 relative"
+          >
+            <div
+              class="rounded-tl-[50px] rounded-bl-[50px] border-solid border-button-fill border-t border-b border-l pt-[17px] pr-6 pb-[17px] pl-6 flex flex-row gap-2.5 items-center justify-start flex-1 h-14 relative"
+            >
+              <div
+                class="text-[#ffffff] text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative"
+              >
+                Email Address
+              </div>
+            </div>
+            <div
+              class="bg-button-fill rounded-tr-[50px] rounded-br-[50px] pt-[17px] pr-7 pb-[17px] pl-7 flex flex-row gap-2 items-center justify-center shrink-0 h-14 relative"
+            >
+              <div class="shrink-0 w-7 h-7 relative overflow-hidden">
+                <img
+                  class="h-[auto] absolute left-0 top-0 overflow-visible"
+                  src="group0.svg"
+                />
+              </div>
+              <div
+                class="text-[#ffffff] text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+              >
+                SUBSCRIBE
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-row gap-11 items-center justify-start shrink-0 relative"
+        >
+          <div
+            class="flex flex-col gap-3 items-center justify-start shrink-0 relative"
+          >
+            <img
+              class="shrink-0 w-6 h-6 relative overflow-visible"
+              src="ri-facebook-fill0.svg"
+            />
+            <div
+              class="text-[#ffffff] text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height font-body-16-font-weight relative"
+            >
+              Facebook
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-3 items-center justify-start shrink-0 relative"
+          >
+            <img
+              class="shrink-0 w-6 h-6 relative overflow-visible"
+              src="mdi-linkedin0.svg"
+            />
+            <div
+              class="text-[#ffffff] text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height font-body-16-font-weight relative"
+            >
+              Linkedin
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-3 items-center justify-start shrink-0 relative"
+          >
+            <img
+              class="shrink-0 w-6 h-6 relative overflow-visible"
+              src="ic-baseline-tiktok0.svg"
+            />
+            <div
+              class="text-[#ffffff] text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height font-body-16-font-weight relative"
+            >
+              Tiktok
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-3 items-center justify-start shrink-0 relative"
+          >
+            <img
+              class="shrink-0 w-6 h-6 relative overflow-visible"
+              src="mdi-youtube0.svg"
+            />
+            <div
+              class="text-[#ffffff] text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height font-body-16-font-weight relative"
+            >
+              Youtube
+            </div>
+          </div>
+          <div
+            class="flex flex-col gap-3 items-center justify-start shrink-0 relative"
+          >
+            <img
+              class="shrink-0 w-6 h-6 relative overflow-visible"
+              src="ri-whatsapp-fill0.svg"
+            />
+            <div
+              class="text-[#ffffff] text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height font-body-16-font-weight relative"
+            >
+              Whatsapp
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex flex-col gap-8 items-center justify-start self-stretch shrink-0 relative"
+      >
+        <div
+          class="border-solid border-bg-2 border-t-2 border-r-[0] border-b-[0] border-l-[0] shrink-0 w-[1176px] h-0 relative"
+          style="
+            margin-top: -2px;
+            transform-origin: 0 0;
+            transform: rotate(0deg) scale(1, 1);
+          "
+        ></div>
+        <div
+          class="flex flex-col gap-4 items-center justify-start shrink-0 relative"
+        >
+          <div
+            class="flex flex-row gap-6 items-center justify-start shrink-0 relative"
+          >
+            <div
+              class="text-[#ffffff] text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative"
+              style="text-decoration: underline"
+            >
+              Insights
+            </div>
+            <div
+              class="text-[#ffffff] text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative"
+              style="text-decoration: underline"
+            >
+              FAQs
+            </div>
+            <div
+              class="text-[#ffffff] text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative"
+              style="text-decoration: underline"
+            >
+              Privacy Policy
+            </div>
+            <div
+              class="text-[#ffffff] text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative"
+              style="text-decoration: underline"
+            >
+              Terms &amp; Conditions
+            </div>
+          </div>
+          <div
+            class="text-left font-['-',_sans-serif] text-lg leading-[0undefined] font-normal relative"
+          >
+            <span>
+              <span
+                class="copyright-2024-echo-creations-all-rights-reserved-span"
+              >
+                © Copyright 2024 -
+              </span>
+              <span
+                class="copyright-2024-echo-creations-all-rights-reserved-span2"
+              >
+                Echo Creations
+              </span>
+              <span
+                class="copyright-2024-echo-creations-all-rights-reserved-span"
+              >
+                . All Rights Reserved.
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
