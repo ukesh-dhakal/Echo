@@ -1,375 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./vars.css">
-  <link rel="stylesheet" href="./style.css">
-  <script src='https://cdn.tailwindcss.com/3.2.0' ></script>
-  <script src="./tailwind.config.js"></script>
-  <style>
-   a,
-   button,
-   input,
-   select,
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   * {
-       box-sizing: border-box;
-       margin: 0;
-       padding: 0;
-       border: none;
-       text-decoration: none;
-       background: none;
-   
-       -webkit-font-smoothing: antialiased;
-   }
-   
-   menu, ol, ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-   }
-   </style>
-  <title>Document</title>
-</head>
-<body>
-  <div class="bg-primary-bg h-[2690px] relative overflow-hidden">
-    <div
-      class="pt-[223px] pr-[495px] pb-[223px] pl-[495px] flex flex-col gap-2.5 items-center justify-center w-[100%] h-[460px] absolute right-[0%] left-[0%] top-0"
-    >
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./vars.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com/3.2.0"></script>
+    <script src="./tailwind.config.js"></script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Urbanist", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background-color: var(--primary-bg);
+        color: #ffffff;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    </style>
+    <title>Terms &amp; Conditions | Echo Creations</title>
+  </head>
+  <body class="min-h-screen bg-primary-bg text-white">
+    <div class="relative overflow-hidden">
       <img
-        class="shrink-0 w-[100%] h-[460px] absolute right-[0%] left-[0%] top-0 overflow-visible"
         src="mask-group0.svg"
+        alt="Gradient background"
+        class="pointer-events-none absolute inset-x-0 top-0 h-[360px] w-full object-cover"
+        aria-hidden="true"
       />
-      <div
-        class="flex flex-col gap-3 items-center justify-start self-stretch shrink-0 relative"
+
+      <header
+        class="sticky top-0 z-50 border-b border-white/10 bg-[rgba(17,16,19,0.82)] backdrop-blur-xl"
       >
-        <div
-          class="text-[#ffffff] text-center font-banner-heading-font-family text-banner-heading-font-size leading-banner-heading-line-height font-banner-heading-font-weight relative"
-        >
-          Terms &amp; Conditions
-        </div>
-        <div
-          class="text-[#ffffff] text-center font-banner-subtext-font-family text-banner-subtext-font-size leading-banner-subtext-line-height font-banner-subtext-font-weight relative"
-        >
-          Setting the Foundation for a Trustworthy Partnership
-        </div>
-      </div>
-    </div>
-    <div
-      class="flex flex-col gap-8 items-start justify-start w-[1176px] absolute left-[50%] top-[560px]"
-      style="translate: -50%"
-    >
-      <div
-        class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative"
-      >
-        <div
-          class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
-        >
-          Services &amp; Use of Website
-        </div>
-        <div
-          class="text-secondary text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative self-stretch"
-        >
-          Luctus amet hendrerit praesent vel nisl sit. Adipiscing lacinia maecenas
-          enim vitae sit urna. Odio adipiscing a nec feugiat. At dictumst urna
-          elit non sit id tellus vestibulum. Vitae tortor amet et facilisis nunc
-          dictum laoreet sed eu. Hendrerit sapien risus at sollicitudin nisl
-          auctor. Sed diam nunc quis in fames. At duis lorem magna velit diam
-          morbi ultricies consequat. Bibendum tortor lacus vulputate scelerisque.
-          Ultricies neque ipsum aliquet interdum sodales aliquam arcu id urna.
-          Pellentesque dapibus faucibus molestie nulla. Commodo fringilla mauris
-          eu morbi hendrerit odio purus in nam.
-          <br />
-          Tellus integer eget et odio diam lorem. Sit id feugiat diam fringilla
-          faucibus nunc. Viverra urna nunc in odio. Facilisi pharetra pulvinar
-          morbi lacinia donec. Elementum turpis sodales lectus a enim pulvinar
-          facilisi consectetur. Adipiscing turpis sollicitudin sed faucibus augue
-          venenatis velit magna eu. Nisl elit ipsum neque ut parturient platea
-          felis. Id ut quis facilisis proin semper urna blandit ultrices
-          ridiculus. A ornare nec sapien nibh aliquet viverra. Neque sit
-          adipiscing adipiscing semper nulla justo proin.
-        </div>
-      </div>
-      <div
-        class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative"
-      >
-        <div
-          class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
-        >
-          Intellectual Property Rights
-        </div>
-        <div
-          class="text-secondary text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative self-stretch"
-        >
-          Libero sem orci quam odio. Erat neque molestie nullam varius risus porta
-          id nisl. Sed ullamcorper justo proin duis. Quis ac proin ultricies
-          egestas convallis pulvinar ullamcorper fermentum. Elementum elit sociis
-          pharetra vulputate integer et sagittis. Bibendum neque venenatis
-          placerat augue. Mauris suscipit egestas volutpat iaculis condimentum et.
-          Eu aliquet aliquam morbi quam. Elit nibh iaculis ipsum non faucibus.
-          Pellentesque quam felis non quis aenean ac. Diam ullamcorper sit a non
-          neque dignissim nullam interdum venenatis. Lobortis non volutpat ut eros
-          massa nibh quisque duis aliquet. Sed luctus congue pellentesque volutpat
-          amet sit. Odio ipsum ipsum libero etiam orci in mauris purus amet.
-          <br />
-          Gravida viverra est accumsan libero sit aliquam. Malesuada in orci dui
-          ac sapien id viverra. Neque nibh vulputate sociis augue imperdiet. Amet
-          maecenas mattis tincidunt morbi. Faucibus faucibus dolor elementum
-          varius sit amet sed ac. Pellentesque nisi cursus a sapien tortor
-          interdum diam imperdiet. Nunc velit quis senectus consectetur. Enim nunc
-          et gravida risus volutpat et sit. Tristique ut ultricies aliquet sem
-          sollicitudin enim. Leo fringilla venenatis volutpat massa. Vulputate
-          varius tempus in imperdiet imperdiet magna ut tellus. Cursus odio
-          sollicitudin viverra metus id. Orci purus sed lectus aliquam pulvinar
-          egestas morbi nibh faucibus.
-        </div>
-      </div>
-      <div
-        class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative"
-      >
-        <div
-          class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
-        >
-          Limitation of Liability
-        </div>
-        <div
-          class="text-secondary text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative self-stretch"
-        >
-          Arcu massa auctor sem ultrices sit. Pretium pellentesque pharetra varius
-          pretium scelerisque sed eu vulputate mi. Suspendisse augue felis tempor
-          pellentesque sagittis arcu orci sed ut. Id in at amet at scelerisque
-          nunc massa. Donec id ornare orci nulla etiam.
-          <br />
-          Pharetra sodales mollis ornare risus in dui risus. Egestas nec iaculis
-          egestas metus quis nunc congue non. Molestie purus tincidunt faucibus et
-          pretium. Platea duis duis scelerisque magnis adipiscing scelerisque
-          varius non elementum. Dignissim vitae cursus nunc ac sagittis.
-        </div>
-      </div>
-      <div
-        class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative"
-      >
-        <div
-          class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
-        >
-          User Content and Submissions
-        </div>
-        <div
-          class="text-secondary text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative self-stretch"
-        >
-          Turpis suspendisse lorem urna at. Iaculis magnis pellentesque eu
-          interdum fames iaculis eget laoreet. Id posuere faucibus elit convallis
-          condimentum. Velit eu sed lectus consectetur molestie. Netus nulla sed
-          et at fusce facilisi nulla. Nunc nunc sit pellentesque malesuada
-          elementum. Urna libero semper non et ullamcorper elementum consequat.
-          Venenatis consectetur sit et risus viverra facilisi diam lacinia. Eu
-          donec commodo diam pellentesque tortor vulputate. Felis rutrum aliquet
-          eu sapien aliquam ullamcorper mauris. Aenean scelerisque et eget cras
-          amet egestas. Diam justo curabitur condimentum orci id vulputate
-          imperdiet. Faucibus ultricies molestie et turpis. Viverra eu proin quis
-          eget lectus mauris eu. Sed fringilla ultrices dui molestie ac.
-          <br />
-          Aenean ornare et non ornare consequat ante vitae. Id rhoncus
-          pellentesque amet rhoncus sed pretium consectetur. Convallis egestas vel
-          adipiscing accumsan lectus. Eros dui enim massa pellentesque elementum
-          cras. Elementum arcu vitae arcu nulla ipsum luctus a purus. Hendrerit
-          elementum tortor proin lorem egestas. Augue volutpat ornare dignissim
-          purus urna turpis dictum integer nibh.
-        </div>
-      </div>
-      <div
-        class="flex flex-col gap-3 items-start justify-start self-stretch shrink-0 relative"
-      >
-        <div
-          id="privacy-policy"
-          class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
-        >
-          Privacy and Data Protection
-        </div>
-        <div
-          class="text-secondary text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative self-stretch"
-        >
-          In a digital age where convenience is key, podcasts cater to the growing
-          demand for on-demand content. With increasing accessibility through
-          platforms like Spotify, Apple Podcasts, and Google Podcasts, brands can
-          reach a global audience effortlessly. The medium’s scalability makes it
-          an essential tool for future storytelling and brand growth.Cursus cursus
-          sed quisque eget ultrices gravida est diam nulla. Neque sit integer
-          lacus eros. Elit et orci dignissim eget. Nunc erat tellus aliquet nullam
-          malesuada ornare risus turpis enim. Venenatis at consequat faucibus
-          risus. Ornare egestas suscipit in est scelerisque neque eget. Senectus
-          orci nec massa mi et quis urna. Mauris facilisi est et ac diam a enim
-          iaculis imperdiet. Hendrerit euismod fermentum eros fames leo vulputate
-          nec. Ornare pellentesque euismod euismod sit ut egestas commodo. Quis
-          condimentum malesuada tempor urna viverra.
-        </div>
-      </div>
-    </div>
-    <footer
-      class="border-solid border-secondary border-t pt-[100px] pr-[132px] pb-8 pl-[132px] flex flex-col gap-[60px] items-center justify-start w-[100%] absolute right-[0%] left-[0%] top-[2130px]"
-    >
-      <div class="flex flex-col gap-[60px] items-center justify-start w-full max-w-[776px]">
-        <div class="flex flex-col gap-8 items-center justify-start w-full text-center">
-          <div class="text-[#ffffff] text-center font-section-heading-font-family text-section-heading-font-size leading-section-heading-line-height font-section-heading-font-weight">
-            Create. Inspire. Subscribe.
-          </div>
-          <form class="flex flex-col gap-4 items-center justify-start w-full sm:flex-row sm:items-center sm:justify-center" onsubmit="return false;">
-            <label for="footer-email" class="sr-only">Email Address</label>
-            <input
-              id="footer-email"
-              type="email"
-              placeholder="Email Address"
-              class="w-full sm:flex-1 rounded-full border border-button-fill bg-transparent px-6 py-[17px] text-[#ffffff] font-body-18-font-family text-body-18-font-size leading-body-18-line-height placeholder:text-[#9B9B9B] focus:outline-none focus:ring-2 focus:ring-button-fill"
+        <div class="mx-auto flex h-[90px] max-w-6xl items-center justify-between px-6">
+          <a href="../Home/index.html" class="flex items-center gap-3">
+            <img
+              src="echo-creations-logo-copy-10.png"
+              alt="Echo Creations icon"
+              class="h-10 w-auto"
             />
-            <button
-              type="submit"
-              class="w-full sm:w-auto bg-button-fill rounded-full px-7 py-[17px] flex flex-row gap-2 items-center justify-center uppercase text-[#ffffff] font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight tracking-[0.08em] transition-colors hover:bg-secondary"
+            <img
+              src="echo-creations-logo-copy-20.png"
+              alt="Echo Creations wordmark"
+              class="h-8 w-auto"
+            />
+          </a>
+
+          <button
+            type="button"
+            class="inline-flex items-center justify-center rounded-full border border-white/20 p-2 text-white transition hover:border-white/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            data-mobile-toggle
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <svg
+              data-open-icon
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              class="h-6 w-6"
             >
-              <span>Subscribe</span>
-              <img class="w-7 h-7" src="group0.svg" alt="" />
-            </button>
-          </form>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg
+              data-close-icon
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              class="hidden h-6 w-6"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="m6 6 12 12M6 18 18 6" />
+            </svg>
+          </button>
+
+          <nav class="hidden gap-8 text-secondary md:flex" aria-label="Primary">
+            <a data-nav-link href="../Home/index.html">Home</a>
+            <a data-nav-link href="../About/index.html">About</a>
+            <a data-nav-link href="../Podcasts/index.html">Ankur’s Podcast</a>
+            <a data-nav-link href="../Servics/index.html">Services</a>
+            <a data-nav-link href="../Contact/index.html">Contact</a>
+          </nav>
+
+          <a
+            href="../Inquiry/index.html"
+            class="hidden items-center gap-2 rounded-full bg-button-fill px-6 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:bg-secondary sm:inline-flex"
+          >
+            <span>Let’s Talk</span>
+            <img src="formkit-arrowright0.svg" alt="" class="h-3.5 w-5" />
+          </a>
         </div>
-        <div class="flex flex-col gap-10 items-center justify-start w-full">
-          <div class="flex flex-wrap gap-4 items-center justify-center w-full">
-            <a href="https://www.facebook.com" class="flex items-center justify-center w-12 h-12 rounded-full border border-[#1F1E24] hover:border-secondary transition-colors" aria-label="Facebook">
-              <img class="w-6 h-6" src="ri-facebook-fill0.svg" alt="" />
+
+        <div id="mobile-menu" class="hidden border-t border-white/10 bg-[rgba(17,16,19,0.95)] md:hidden">
+          <nav class="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4 text-base text-secondary" aria-label="Mobile primary">
+            <a data-nav-link href="../Home/index.html" class="rounded-lg px-3 py-2 transition hover:bg-white/5">Home</a>
+            <a data-nav-link href="../About/index.html" class="rounded-lg px-3 py-2 transition hover:bg-white/5">About</a>
+            <a data-nav-link href="../Podcasts/index.html" class="rounded-lg px-3 py-2 transition hover:bg-white/5">Ankur’s Podcast</a>
+            <a data-nav-link href="../Servics/index.html" class="rounded-lg px-3 py-2 transition hover:bg-white/5">Services</a>
+            <a data-nav-link href="../Contact/index.html" class="rounded-lg px-3 py-2 transition hover:bg-white/5">Contact</a>
+            <a
+              href="../Inquiry/index.html"
+              class="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-button-fill px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-secondary"
+            >
+              Let’s Talk
+              <img src="formkit-arrowright0.svg" alt="" class="h-3.5 w-5" />
             </a>
-            <a href="https://www.linkedin.com" class="flex items-center justify-center w-12 h-12 rounded-full border border-[#1F1E24] hover:border-secondary transition-colors" aria-label="LinkedIn">
-              <img class="w-6 h-6" src="mdi-linkedin0.svg" alt="" />
-            </a>
-            <a href="https://www.tiktok.com" class="flex items-center justify-center w-12 h-12 rounded-full border border-[#1F1E24] hover:border-secondary transition-colors" aria-label="TikTok">
-              <img class="w-6 h-6" src="ic-baseline-tiktok0.svg" alt="" />
-            </a>
-            <a href="https://www.youtube.com" class="flex items-center justify-center w-12 h-12 rounded-full border border-[#1F1E24] hover:border-secondary transition-colors" aria-label="YouTube">
-              <img class="w-6 h-6" src="mdi-youtube0.svg" alt="" />
-            </a>
-            <a href="https://www.whatsapp.com" class="flex items-center justify-center w-12 h-12 rounded-full border border-[#1F1E24] hover:border-secondary transition-colors" aria-label="WhatsApp">
-              <img class="w-6 h-6" src="ri-whatsapp-fill0.svg" alt="" />
-            </a>
-          </div>
-          <div class="flex flex-col gap-6 items-center justify-start w-full border-t border-[#1F1E24] pt-8">
-            <div class="flex flex-wrap gap-6 items-center justify-center text-center">
-              <a href="../Insights/index.html" class="text-[#ffffff] font-body-18-font-family text-body-18-font-size leading-body-18-line-height hover:text-secondary transition-colors">Insights</a>
-              <a href="../FAQ/index.html" class="text-[#ffffff] font-body-18-font-family text-body-18-font-size leading-body-18-line-height hover:text-secondary transition-colors">FAQs</a>
-              <a href="../terms and conditions/index.html#privacy-policy" class="text-[#ffffff] font-body-18-font-family text-body-18-font-size leading-body-18-line-height hover:text-secondary transition-colors">Privacy Policy</a>
-              <a href="../terms and conditions/index.html" class="text-[#ffffff] font-body-18-font-family text-body-18-font-size leading-body-18-line-height hover:text-secondary transition-colors">Terms &amp; Conditions</a>
-            </div>
-            <p class="text-center text-[#9B9B9B] font-body-18-font-family text-body-18-font-size leading-body-18-line-height">
-              © Copyright 2024 - <a href="../Home/index.html" class="text-transparent bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#FF7A00] font-semibold transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A00]">Echo Creations</a>. All Rights Reserved.
+          </nav>
+        </div>
+      </header>
+
+      <main class="relative z-10">
+        <section class="relative px-6 py-20 text-center">
+          <div class="mx-auto max-w-3xl space-y-4">
+            <p class="text-sm uppercase tracking-[0.4em] text-secondary">Updated December 13, 2024</p>
+            <h1 class="text-4xl font-semibold">Terms &amp; Conditions</h1>
+            <p class="text-secondary text-base leading-7">
+              These terms outline how Echo Creations partners with clients and how visitors may use our website. By engaging with our services you agree to the practices described below.
             </p>
           </div>
-        </div>
-      </div>
-    </footer>
-    <div
-      class="bg-[rgba(17,16,19,0.8)] backdrop-blur-md border-b border-white/10 pt-6 pr-[60px] pb-6 pl-[60px] w-full h-[90px] fixed top-0 left-0 right-0 z-50"
-    >
-      <div
-        class="flex flex-row gap-3 items-center justify-start absolute left-[60px] top-6"
-      >
-        <img
-          class="shrink-0 w-[86.71px] h-[42px] relative"
-          style="object-fit: cover"
-          src="echo-creations-logo-copy-10.png"
-        />
-        <img
-          class="shrink-0 w-44 h-8 relative"
-          style="object-fit: cover"
-          src="echo-creations-logo-copy-20.png"
-        />
-      </div>
-      <nav
-        class="flex flex-row gap-8 items-center justify-start absolute left-[50%] top-[34px]"
-        style="translate: -50%"
-      >
-        <a
-          data-nav-link
-          href="../Home/index.html"
-          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-        >
-          Home
-        </a>
-        <a
-          data-nav-link
-          href="../About/index.html"
-          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-        >
-          About
-        </a>
-        <a
-          data-nav-link
-          href="../Podcasts/index.html"
-          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-        >
-          Ankur’s Podcast
-        </a>
-        <a
-          data-nav-link
-          href="../Servics/index.html"
-          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-        >
-          Services
-        </a>
-        <a
-          data-nav-link
-          href="../Contact/index.html"
-          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-        >
-          Contact
-        </a>
-      </nav>
-      <script>
-        (function () {
-          const currentPath = window.location.pathname.replace(/\\/g, '/');
-          document.querySelectorAll('[data-nav-link]').forEach(link => {
-            const href = link.getAttribute('href');
-            if (!href) return;
-            const linkPath = new URL(href, window.location.origin).pathname.replace(/\\/g, '/');
-            if (currentPath.endsWith(linkPath)) {
-              link.classList.remove('text-secondary', 'text-gray-400');
-              link.classList.add(
-                'text-[#ffffff]',
-                'font-semibold',
-                'underline',
-                'decoration-2',
-                'decoration-[#ffffff]'
-              );
-            } else {
-              link.classList.add('text-gray-400', 'hover:text-[#ffffff]', 'transition-colors');
-            }
-          });
-        })();
-      </script>
+        </section>
 
-      <a
-        class="bg-secondary rounded-[50px] pt-[9px] pr-6 pb-[9px] pl-6 flex flex-row gap-1 items-center justify-start absolute right-[60px] top-6"
-        href="../Inquiry/index.html"
-      >
-        <div
-          class="flex flex-row gap-1 items-center justify-start shrink-0 relative"
-        >
-          <div
-            class="text-[#ffffff] text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height font-body-16-font-weight relative"
-          >
-            Let’s Talk
+        <section class="mx-auto max-w-4xl px-6 pb-24 space-y-12 text-secondary text-base leading-7">
+          <article class="space-y-4">
+            <h2 class="text-2xl font-semibold text-white">1. Services &amp; use of website</h2>
+            <p>
+              Luctus amet hendrerit praesent vel nisl sit. Adipiscing lacinia maecenas enim vitae sit urna. Odio adipiscing a nec feugiat. At dictumst urna mauris bibendum dui purus sit sagittis magna. Arcu et vestibulum curabitur laoreet tincidunt in aliquam pretium.
+            </p>
+            <p>
+              By accessing our website or booking services you confirm that you will not misuse content, interfere with site security, or attempt to resell our proprietary materials without written consent.
+            </p>
+          </article>
+
+          <article class="space-y-4">
+            <h2 class="text-2xl font-semibold text-white">2. Production agreements</h2>
+            <p>
+              Each project is governed by a separate statement of work detailing scope, deliverables, timelines, and payment milestones. Changes requested outside of the agreed scope may require an updated quotation.
+            </p>
+            <p>
+              Clients are responsible for providing timely feedback, approvals, and access to talent or locations needed to complete production. Delays caused by missing inputs may shift delivery dates.
+            </p>
+          </article>
+
+          <article id="privacy-policy" class="space-y-4">
+            <h2 class="text-2xl font-semibold text-white">3. Privacy policy</h2>
+            <p>
+              We collect the minimum personal information necessary to respond to inquiries, manage projects, and deliver newsletters. Data is stored securely and never sold to third parties.
+            </p>
+            <ul class="space-y-2">
+              <li>• Contact details are used solely for communication about your project or subscription.</li>
+              <li>• You may request data deletion or export at any time by emailing <a href="mailto:info.echocreations@gmail.com" class="text-white underline">info.echocreations@gmail.com</a>.</li>
+              <li>• Analytics cookies help us understand site performance; you can disable them in your browser.</li>
+            </ul>
+          </article>
+
+          <article class="space-y-4">
+            <h2 class="text-2xl font-semibold text-white">4. Intellectual property</h2>
+            <p>
+              Echo Creations retains ownership of pre-existing materials, templates, and processes. Upon full payment clients receive the rights outlined in their agreement for final deliverables.
+            </p>
+          </article>
+
+          <article class="space-y-4">
+            <h2 class="text-2xl font-semibold text-white">5. Liability</h2>
+            <p>
+              We approach every production with care, however Echo Creations is not liable for indirect, incidental, or consequential damages arising from project outcomes beyond the control defined in our agreements.
+            </p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="border-t border-secondary bg-transparent">
+        <div class="mx-auto flex max-w-5xl flex-col gap-16 px-6 py-24 text-center">
+          <div class="space-y-8">
+            <h2 class="text-4xl font-semibold">Create. Inspire. Subscribe.</h2>
+            <form
+              class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center"
+              onsubmit="return false;"
+            >
+              <label for="footer-email" class="sr-only">Email Address</label>
+              <input
+                id="footer-email"
+                type="email"
+                placeholder="Email Address"
+                class="w-full rounded-full border border-button-fill bg-transparent px-6 py-4 text-base text-white placeholder:text-[#9B9B9B] focus:outline-none focus:ring-2 focus:ring-button-fill"
+              />
+              <button
+                type="submit"
+                class="flex w-full items-center justify-center gap-2 rounded-full bg-button-fill px-8 py-4 text-sm font-semibold uppercase tracking-[0.24em] transition hover:bg-secondary sm:w-auto"
+              >
+                Subscribe
+                <img src="group0.svg" alt="" class="h-6 w-6" />
+              </button>
+            </form>
           </div>
-          <img
-            class="shrink-0 w-[21.34px] h-3 relative overflow-visible"
-            src="formkit-arrowright0.svg"
-          />
+
+          <div class="flex flex-col items-center gap-10">
+            <div class="flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="https://www.facebook.com"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1E24] transition hover:border-secondary"
+                aria-label="Facebook"
+              >
+                <img src="ri-facebook-fill0.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.linkedin.com"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1E24] transition hover:border-secondary"
+                aria-label="LinkedIn"
+              >
+                <img src="mdi-linkedin0.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.tiktok.com"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1E24] transition hover:border-secondary"
+                aria-label="TikTok"
+              >
+                <img src="ic-baseline-tiktok0.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.youtube.com"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1E24] transition hover:border-secondary"
+                aria-label="YouTube"
+              >
+                <img src="mdi-youtube0.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.whatsapp.com"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1E24] transition hover:border-secondary"
+                aria-label="WhatsApp"
+              >
+                <img src="ri-whatsapp-fill0.svg" alt="" class="h-6 w-6" />
+              </a>
+            </div>
+
+            <div class="flex flex-col items-center gap-6 border-t border-[#1F1E24] pt-8">
+              <nav class="flex flex-wrap justify-center gap-6 text-sm text-secondary">
+                <a href="../Insights/index.html" class="transition hover:text-white">Insights</a>
+                <a href="../FAQ/index.html" class="transition hover:text-white">FAQs</a>
+                <a
+                  href="#privacy-policy"
+                  class="transition hover:text-white"
+                  >Privacy Policy</a
+                >
+                <a href="../Home/index.html" class="transition hover:text-white">Home</a>
+              </nav>
+              <p class="text-sm text-secondary">
+                © Copyright 2024 -
+                <a
+                  href="../Home/index.html"
+                  class="bg-gradient-to-r from-[#ffffff] to-[#FF7A00] bg-clip-text font-semibold text-transparent transition hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF7A00]"
+                  >Echo Creations</a
+                >.
+                All Rights Reserved.
+              </p>
+            </div>
+          </div>
         </div>
-      </a>
+      </footer>
     </div>
-  </div>
-    </div>
-  </div>
-  
-</body>
+
+    <script>
+      (function () {
+        const currentPath = window.location.pathname.replace(/\\/g, "/");
+        const navLinks = document.querySelectorAll("[data-nav-link]");
+        navLinks.forEach((link) => {
+          const href = link.getAttribute("href");
+          if (!href) return;
+          const linkPath = new URL(href, window.location.origin)
+            .pathname.replace(/\\/g, "/");
+          if (currentPath.endsWith(linkPath)) {
+            link.classList.add(
+              "text-white",
+              "font-semibold",
+              "underline",
+              "decoration-2"
+            );
+            link.classList.remove("text-secondary");
+          } else {
+            link.classList.add("text-secondary", "hover:text-white", "transition-colors");
+          }
+        });
+
+        const toggleButton = document.querySelector("[data-mobile-toggle]");
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (toggleButton && mobileMenu) {
+          const openIcon = toggleButton.querySelector("[data-open-icon]");
+          const closeIcon = toggleButton.querySelector("[data-close-icon]");
+
+          const setMenuState = (isOpen) => {
+            mobileMenu.classList.toggle("hidden", !isOpen);
+            toggleButton.setAttribute("aria-expanded", String(isOpen));
+            openIcon?.classList.toggle("hidden", isOpen);
+            closeIcon?.classList.toggle("hidden", !isOpen);
+          };
+
+          toggleButton.addEventListener("click", () => {
+            const isOpen = mobileMenu.classList.contains("hidden");
+            setMenuState(isOpen);
+          });
+
+          mobileMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => setMenuState(false));
+          });
+        }
+      })();
+    </script>
+  </body>
 </html>

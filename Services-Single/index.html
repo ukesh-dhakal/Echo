@@ -1,316 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./vars.css">
-  <link rel="stylesheet" href="./style.css">
-  <script src='https://cdn.tailwindcss.com/3.2.0' ></script>
-  <script src="./tailwind.config.js"></script>
-  <style>
-   a,
-   button,
-   input,
-   select,
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   * {
-       box-sizing: border-box;
-       margin: 0;
-       padding: 0;
-       border: none;
-       text-decoration: none;
-       background: none;
-   
-       -webkit-font-smoothing: antialiased;
-   }
-   
-   menu, ol, ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-   }
-   </style>
-  <title>Document</title>
-</head>
-<body>
-  <div class="bg-primary-bg h-[2418px] relative overflow-hidden">
-    <div
-      class="pt-[223px] pr-[495px] pb-[223px] pl-[495px] flex flex-col gap-2.5 items-center justify-center w-[100%] h-[664px] absolute right-[0%] left-[0%] top-0"
-    >
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./vars.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com/3.2.0"></script>
+    <script src="./tailwind.config.js"></script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Urbanist", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background-color: var(--primary-bg);
+        color: #ffffff;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    </style>
+    <title>Podcast Production | Echo Creations</title>
+  </head>
+  <body class="min-h-screen bg-primary-bg text-white">
+    <div class="relative overflow-hidden">
       <img
-        class="shrink-0 w-[100%] h-[664px] absolute right-[0%] left-[0%] top-0 overflow-visible"
         src="mask-group0.svg"
+        alt="Gradient background"
+        class="pointer-events-none absolute inset-x-0 top-0 h-[420px] w-full object-cover"
+        aria-hidden="true"
       />
-      <div
-        class="flex flex-col gap-3 items-center justify-start self-stretch shrink-0 relative"
+
+      <header
+        class="sticky top-0 z-50 border-b border-white/10 bg-[rgba(17,16,19,0.82)] backdrop-blur-xl"
       >
-        <div
-          class="text-[#ffffff] text-center font-banner-heading-font-family text-banner-heading-font-size leading-banner-heading-line-height font-banner-heading-font-weight relative"
-        >
-          Podcasts
-        </div>
-        <div
-          class="text-[#ffffff] text-center font-banner-subtext-font-family text-banner-subtext-font-size leading-banner-subtext-line-height font-banner-subtext-font-weight relative"
-        >
-          Turning Conversations into Captivating Experiences
-        </div>
-      </div>
-    </div>
-    <div
-      class="flex flex-col gap-[52px] items-center justify-start absolute left-[50%] top-[764px]"
-      style="translate: -50%"
-    >
-      <div
-        class="flex flex-row gap-6 items-start justify-center shrink-0 w-[1176px] relative"
-      >
-        <div
-          class="flex flex-col gap-8 items-start justify-start flex-1 relative"
-        >
-          <div
-            class="text-[#ffffff] text-left font-text-32-font-family text-text-32-font-size font-text-32-font-weight relative self-stretch"
-          >
-            Bringing Ideas to Life, One Episode at a Time.
-          </div>
-          <div
-            class="text-secondary text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative self-stretch"
-          >
-            Faucibus in orci aliquam accumsan. Felis aliquet id auctor diam non
-            neque ornare mi. Tincidunt risus enim viverra morbi tempus amet eget
-            condimentum malesuada. Suscipit facilisis nibh nullam dignissim
-            adipiscing est turpis leo scelerisque. Aliquam ultrices diam id donec
-            tellus diam tempor. Felis gravida augue arcu eleifend. Aliquam eros
-            suscipit volutpat condimentum. Velit interdum quam lacus venenatis
-            rhoncus vel at. Et etiam duis aliquam et massa cras sit blandit purus.
-            Vulputate ut lacinia et sollicitudin ut habitasse lobortis sit.
-            Pulvinar vivamus quam et cras at. Habitasse massa et integer donec sit
-            ut.
-            <br />
-            Duis mattis tellus nullam purus sit. Proin volutpat suspendisse quam
-            in faucibus a. Dignissim fermentum porttitor ac ut magna varius vel
-            tellus semper. Interdum phasellus felis phasellus sit ultrices non sit
-            faucibus faucibus. Habitant senectus orci quam porttitor.
-          </div>
-          <div
-            class="bg-button-fill rounded-[50px] pt-4 pr-11 pb-4 pl-11 flex flex-row gap-1 items-center justify-start shrink-0 relative"
-          >
-            <div
-              class="flex flex-row gap-1 items-center justify-start shrink-0 relative"
-            >
-              <div
-                class="text-[#ffffff] text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-              >
-                Let’s Talk
-              </div>
-              <img
-                class="shrink-0 w-[21.34px] h-3 relative overflow-visible"
-                src="formkit-arrowright0.svg"
-              />
-            </div>
-          </div>
-        </div>
-        <img
-          class="shrink-0 w-[576px] h-[576px] relative overflow-visible"
-          src="mask-group1.svg"
-        />
-      </div>
-    </div>
-    <div
-      class="flex flex-col gap-4 items-start justify-start w-[1176px] absolute left-[50%] top-[1440px]"
-      style="translate: -50%"
-    >
-      <div
-        class="text-[#ffffff] text-left font-text-32-font-family text-text-32-font-size font-text-32-font-weight relative self-stretch"
-      >
-        Creating Conversations That Matter
-      </div>
-      <div
-        class="text-secondary text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative self-stretch"
-      >
-        Proin lorem posuere nunc vitae. Nascetur mi euismod duis viverra sapien
-        lorem fringilla id. In mattis fringilla id pellentesque et scelerisque
-        vulputate praesent viverra. Vel elementum imperdiet nisl id. Sed dictum
-        turpis mattis lorem euismod nunc egestas curabitur maecenas. Tristique
-        vitae amet lobortis integer netus. Tristique magna arcu morbi volutpat
-        enim. Curabitur ornare id pulvinar dignissim euismod. Dictum hac tempor
-        lectus massa tincidunt. Risus enim risus in arcu mattis. Eleifend lacus
-        odio orci quis ultrices ac id in mi. Massa suspendisse vitae volutpat
-        vehicula urna nisl sed ac tellus. Cras ipsum viverra quis commodo quam
-        dolor eu consectetur. Vel sed fusce sit donec fermentum dictum mauris
-        feugiat.
-        <br />
-        Egestas cursus vulputate sagittis pretium est interdum morbi. Quam tellus
-        ut a quis at id consequat dolor consectetur. Ipsum netus justo aliquet
-        libero a etiam. Pharetra turpis velit felis lectus. Tellus nunc risus et
-        ut senectus massa congue. Eget est sagittis ac sed in diam enim molestie.
-        Feugiat nulla leo accumsan non duis eget odio vel. Consequat vehicula
-        euismod viverra tortor pellentesque etiam volutpat. Fermentum sed magna
-        hendrerit sit etiam amet nisl dignissim. Amet vulputate pellentesque
-        scelerisque elementum vitae ut a nulla malesuada. At ultricies faucibus
-        quam justo a egestas.
-      </div>
-    </div>
-    <footer
-      class="border-solid border-secondary border-t pt-[100px] pr-[132px] pb-8 pl-[132px] flex flex-col gap-[60px] items-center justify-start w-[100%] absolute right-[0%] left-[0%] top-[1858px]"
-    >
-      <div class="flex flex-col gap-[60px] items-center justify-start w-full max-w-[776px]">
-        <div class="flex flex-col gap-8 items-center justify-start w-full text-center">
-          <div class="text-[#ffffff] text-center font-section-heading-font-family text-section-heading-font-size leading-section-heading-line-height font-section-heading-font-weight">
-            Create. Inspire. Subscribe.
-          </div>
-          <form class="flex flex-col gap-4 items-center justify-start w-full sm:flex-row sm:items-center sm:justify-center" onsubmit="return false;">
-            <label for="footer-email" class="sr-only">Email Address</label>
-            <input
-              id="footer-email"
-              type="email"
-              placeholder="Email Address"
-              class="w-full sm:flex-1 rounded-full border border-button-fill bg-transparent px-6 py-[17px] text-[#ffffff] font-body-18-font-family text-body-18-font-size leading-body-18-line-height placeholder:text-[#9B9B9B] focus:outline-none focus:ring-2 focus:ring-button-fill"
+        <div class="mx-auto flex h-[90px] max-w-6xl items-center justify-between px-6">
+          <a href="../Home/index.html" class="flex items-center gap-3">
+            <img
+              src="echo-creations-logo-copy-10.png"
+              alt="Echo Creations icon"
+              class="h-10 w-auto"
             />
-            <button
-              type="submit"
-              class="w-full sm:w-auto bg-button-fill rounded-full px-7 py-[17px] flex flex-row gap-2 items-center justify-center uppercase text-[#ffffff] font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight tracking-[0.08em] transition-colors hover:bg-secondary"
+            <img
+              src="echo-creations-logo-copy-20.png"
+              alt="Echo Creations wordmark"
+              class="h-8 w-auto"
+            />
+          </a>
+
+          <button
+            type="button"
+            class="inline-flex items-center justify-center rounded-full border border-white/20 p-2 text-white transition hover:border-white/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:hidden"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            data-mobile-toggle
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <svg
+              data-open-icon
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              class="h-6 w-6"
             >
-              <span>Subscribe</span>
-              <img class="w-7 h-7" src="group0.svg" alt="" />
-            </button>
-          </form>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg
+              data-close-icon
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              class="hidden h-6 w-6"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="m6 6 12 12M6 18 18 6" />
+            </svg>
+          </button>
+
+          <nav class="hidden gap-8 text-secondary md:flex" aria-label="Primary">
+            <a data-nav-link href="../Home/index.html">Home</a>
+            <a data-nav-link href="../About/index.html">About</a>
+            <a data-nav-link href="../Podcasts/index.html">Ankur’s Podcast</a>
+            <a data-nav-link href="../Servics/index.html">Services</a>
+            <a data-nav-link href="../Contact/index.html">Contact</a>
+          </nav>
+
+          <a
+            href="../Inquiry/index.html"
+            class="hidden items-center gap-2 rounded-full bg-button-fill px-6 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:bg-secondary sm:inline-flex"
+          >
+            <span>Let’s Talk</span>
+            <img src="formkit-arrowright0.svg" alt="" class="h-3.5 w-5" />
+          </a>
         </div>
-        <div class="flex flex-col gap-10 items-center justify-start w-full">
-          <div class="flex flex-wrap gap-4 items-center justify-center w-full">
-            <a href="https://www.facebook.com" class="flex items-center justify-center w-12 h-12 rounded-full border border-[#1F1E24] hover:border-secondary transition-colors" aria-label="Facebook">
-              <img class="w-6 h-6" src="ri-facebook-fill0.svg" alt="" />
+
+        <div id="mobile-menu" class="hidden border-t border-white/10 bg-[rgba(17,16,19,0.95)] md:hidden">
+          <nav class="mx-auto flex max-w-6xl flex-col gap-1 px-6 py-4 text-base text-secondary" aria-label="Mobile primary">
+            <a data-nav-link href="../Home/index.html" class="rounded-lg px-3 py-2 transition hover:bg-white/5">Home</a>
+            <a data-nav-link href="../About/index.html" class="rounded-lg px-3 py-2 transition hover:bg-white/5">About</a>
+            <a data-nav-link href="../Podcasts/index.html" class="rounded-lg px-3 py-2 transition hover:bg-white/5">Ankur’s Podcast</a>
+            <a data-nav-link href="../Servics/index.html" class="rounded-lg px-3 py-2 transition hover:bg-white/5">Services</a>
+            <a data-nav-link href="../Contact/index.html" class="rounded-lg px-3 py-2 transition hover:bg-white/5">Contact</a>
+            <a
+              href="../Inquiry/index.html"
+              class="mt-3 inline-flex items-center justify-center gap-2 rounded-full bg-button-fill px-6 py-3 text-sm font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-secondary"
+            >
+              Let’s Talk
+              <img src="formkit-arrowright0.svg" alt="" class="h-3.5 w-5" />
             </a>
-            <a href="https://www.linkedin.com" class="flex items-center justify-center w-12 h-12 rounded-full border border-[#1F1E24] hover:border-secondary transition-colors" aria-label="LinkedIn">
-              <img class="w-6 h-6" src="mdi-linkedin0.svg" alt="" />
-            </a>
-            <a href="https://www.tiktok.com" class="flex items-center justify-center w-12 h-12 rounded-full border border-[#1F1E24] hover:border-secondary transition-colors" aria-label="TikTok">
-              <img class="w-6 h-6" src="ic-baseline-tiktok0.svg" alt="" />
-            </a>
-            <a href="https://www.youtube.com" class="flex items-center justify-center w-12 h-12 rounded-full border border-[#1F1E24] hover:border-secondary transition-colors" aria-label="YouTube">
-              <img class="w-6 h-6" src="mdi-youtube0.svg" alt="" />
-            </a>
-            <a href="https://www.whatsapp.com" class="flex items-center justify-center w-12 h-12 rounded-full border border-[#1F1E24] hover:border-secondary transition-colors" aria-label="WhatsApp">
-              <img class="w-6 h-6" src="ri-whatsapp-fill0.svg" alt="" />
-            </a>
-          </div>
-          <div class="flex flex-col gap-6 items-center justify-start w-full border-t border-[#1F1E24] pt-8">
-            <div class="flex flex-wrap gap-6 items-center justify-center text-center">
-              <a href="../Insights/index.html" class="text-[#ffffff] font-body-18-font-family text-body-18-font-size leading-body-18-line-height hover:text-secondary transition-colors">Insights</a>
-              <a href="../FAQ/index.html" class="text-[#ffffff] font-body-18-font-family text-body-18-font-size leading-body-18-line-height hover:text-secondary transition-colors">FAQs</a>
-              <a href="../terms and conditions/index.html#privacy-policy" class="text-[#ffffff] font-body-18-font-family text-body-18-font-size leading-body-18-line-height hover:text-secondary transition-colors">Privacy Policy</a>
-              <a href="../terms and conditions/index.html" class="text-[#ffffff] font-body-18-font-family text-body-18-font-size leading-body-18-line-height hover:text-secondary transition-colors">Terms &amp; Conditions</a>
-            </div>
-            <p class="text-center text-[#9B9B9B] font-body-18-font-family text-body-18-font-size leading-body-18-line-height">
-              © Copyright 2024 - <a href="../Home/index.html" class="text-transparent bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#FF7A00] font-semibold transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A00]">Echo Creations</a>. All Rights Reserved.
+          </nav>
+        </div>
+      </header>
+
+      <main class="relative z-10">
+        <section class="relative overflow-hidden">
+          <div class="absolute inset-0 bg-[rgba(17,16,19,0.6)]"></div>
+          <img
+            src="mask-group0.svg"
+            alt="Podcast studio"
+            class="h-full w-full object-cover"
+          />
+          <div class="relative mx-auto max-w-3xl px-6 py-28 text-center">
+            <p class="text-sm uppercase tracking-[0.4em] text-secondary">Podcast Production</p>
+            <h1 class="mt-4 text-4xl font-semibold leading-tight sm:text-5xl">
+              Bringing ideas to life, one episode at a time
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-secondary">
+              Strategy, sound design, and storytelling tailored to your voice. We handle every detail so you can focus on the conversation.
             </p>
           </div>
-        </div>
-      </div>
-    </footer>
-    <div
-      class="bg-[rgba(17,16,19,0.8)] backdrop-blur-md border-b border-white/10 pt-6 pr-[60px] pb-6 pl-[60px] w-full h-[90px] fixed top-0 left-0 right-0 z-50"
-    >
-      <div
-        class="flex flex-row gap-3 items-center justify-start absolute left-[60px] top-6"
-      >
-        <img
-          class="shrink-0 w-[86.71px] h-[42px] relative"
-          style="object-fit: cover"
-          src="echo-creations-logo-copy-10.png"
-        />
-        <img
-          class="shrink-0 w-44 h-8 relative"
-          style="object-fit: cover"
-          src="echo-creations-logo-copy-20.png"
-        />
-      </div>
-      <nav
-        class="flex flex-row gap-8 items-center justify-start absolute left-[50%] top-[34px]"
-        style="translate: -50%"
-      >
-        <a
-          data-nav-link
-          href="../Home/index.html"
-          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-        >
-          Home
-        </a>
-        <a
-          data-nav-link
-          href="../About/index.html"
-          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-        >
-          About
-        </a>
-        <a
-          data-nav-link
-          href="../Podcasts/index.html"
-          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-        >
-          Ankur’s Podcast
-        </a>
-        <a
-          data-nav-link
-          href="../Servics/index.html"
-          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-        >
-          Services
-        </a>
-        <a
-          data-nav-link
-          href="../Contact/index.html"
-          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-        >
-          Contact
-        </a>
-      </nav>
-      <script>
-        (function () {
-          const currentPath = window.location.pathname.replace(/\\/g, '/');
-          document.querySelectorAll('[data-nav-link]').forEach(link => {
-            const href = link.getAttribute('href');
-            if (!href) return;
-            const linkPath = new URL(href, window.location.origin).pathname.replace(/\\/g, '/');
-            if (currentPath.endsWith(linkPath)) {
-              link.classList.remove('text-secondary', 'text-gray-400');
-              link.classList.add(
-                'text-[#ffffff]',
-                'font-semibold',
-                'underline',
-                'decoration-2',
-                'decoration-[#ffffff]'
-              );
-            } else {
-              link.classList.add('text-gray-400', 'hover:text-[#ffffff]', 'transition-colors');
-            }
-          });
-        })();
-      </script>
+        </section>
 
-      <a
-        class="bg-secondary rounded-[50px] pt-[9px] pr-6 pb-[9px] pl-6 flex flex-row gap-1 items-center justify-start absolute right-[60px] top-6"
-        href="../Inquiry/index.html"
-      >
-        <div
-          class="flex flex-row gap-1 items-center justify-start shrink-0 relative"
-        >
-          <div
-            class="text-[#ffffff] text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height font-body-16-font-weight relative"
-          >
-            Let’s Talk
+        <section class="mx-auto max-w-6xl px-6 pb-16 pt-16">
+          <div class="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center">
+            <div class="space-y-6">
+              <h2 class="text-3xl font-semibold">What’s included</h2>
+              <p class="text-secondary text-base leading-7">
+                Faucibus in orci aliquam accumsan. Felis aliquet id auctor diam non neque ornare mi. Aliquam eros suscipit volutpat condimentum. Velit interdum quam lacus venenatis rhoncus vel at. Et etiam duis aliquam et massa cras sit blandit purus.
+              </p>
+              <ul class="space-y-3 text-secondary">
+                <li>• Concept and show identity development</li>
+                <li>• Guest research, booking, and scripting support</li>
+                <li>• Multi-track recording, editing, mixing, and mastering</li>
+                <li>• Distribution strategy with episodic artwork and copy</li>
+              </ul>
+              <a
+                href="../Inquiry/index.html"
+                class="inline-flex items-center gap-2 rounded-full bg-button-fill px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] transition hover:bg-secondary"
+              >
+                Let’s Talk
+                <img src="formkit-arrowright0.svg" alt="" class="h-3.5 w-5" />
+              </a>
+            </div>
+            <img
+              src="mask-group1.svg"
+              alt="Recording session"
+              class="h-full w-full rounded-[32px] border border-white/10 object-cover"
+            />
           </div>
-          <img
-            class="shrink-0 w-[21.34px] h-3 relative overflow-visible"
-            src="formkit-arrowright0.svg"
-          />
+        </section>
+
+        <section class="mx-auto max-w-6xl px-6 pb-24">
+          <div class="grid gap-8 md:grid-cols-3">
+            <div class="rounded-[28px] border border-white/10 bg-[#1c1b20]/80 p-6 backdrop-blur">
+              <h3 class="text-xl font-semibold">01. Pre-production</h3>
+              <p class="mt-3 text-secondary text-sm">
+                We align on narrative arcs, create episode frameworks, and prep guests with conversation guides.
+              </p>
+            </div>
+            <div class="rounded-[28px] border border-white/10 bg-[#1c1b20]/80 p-6 backdrop-blur">
+              <h3 class="text-xl font-semibold">02. Production</h3>
+              <p class="mt-3 text-secondary text-sm">
+                Capture crisp audio wherever you are thanks to our portable kits, studio partners, and remote workflows.
+              </p>
+            </div>
+            <div class="rounded-[28px] border border-white/10 bg-[#1c1b20]/80 p-6 backdrop-blur">
+              <h3 class="text-xl font-semibold">03. Post &amp; Launch</h3>
+              <p class="mt-3 text-secondary text-sm">
+                Editing, scoring, mastering, and scheduling episodes with promotional assets ready to share.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-secondary bg-transparent">
+        <div class="mx-auto flex max-w-5xl flex-col gap-16 px-6 py-24 text-center">
+          <div class="space-y-8">
+            <h2 class="text-4xl font-semibold">Create. Inspire. Subscribe.</h2>
+            <form
+              class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center"
+              onsubmit="return false;"
+            >
+              <label for="footer-email" class="sr-only">Email Address</label>
+              <input
+                id="footer-email"
+                type="email"
+                placeholder="Email Address"
+                class="w-full rounded-full border border-button-fill bg-transparent px-6 py-4 text-base text-white placeholder:text-[#9B9B9B] focus:outline-none focus:ring-2 focus:ring-button-fill"
+              />
+              <button
+                type="submit"
+                class="flex w-full items-center justify-center gap-2 rounded-full bg-button-fill px-8 py-4 text-sm font-semibold uppercase tracking-[0.24em] transition hover:bg-secondary sm:w-auto"
+              >
+                Subscribe
+                <img src="group0.svg" alt="" class="h-6 w-6" />
+              </button>
+            </form>
+          </div>
+
+          <div class="flex flex-col items-center gap-10">
+            <div class="flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="https://www.facebook.com"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1E24] transition hover:border-secondary"
+                aria-label="Facebook"
+              >
+                <img src="ri-facebook-fill0.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.linkedin.com"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1E24] transition hover:border-secondary"
+                aria-label="LinkedIn"
+              >
+                <img src="mdi-linkedin0.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.tiktok.com"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1E24] transition hover:border-secondary"
+                aria-label="TikTok"
+              >
+                <img src="ic-baseline-tiktok0.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.youtube.com"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1E24] transition hover:border-secondary"
+                aria-label="YouTube"
+              >
+                <img src="mdi-youtube0.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.whatsapp.com"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1E24] transition hover:border-secondary"
+                aria-label="WhatsApp"
+              >
+                <img src="ri-whatsapp-fill0.svg" alt="" class="h-6 w-6" />
+              </a>
+            </div>
+
+            <div class="flex flex-col items-center gap-6 border-t border-[#1F1E24] pt-8">
+              <nav class="flex flex-wrap justify-center gap-6 text-sm text-secondary">
+                <a href="../Insights/index.html" class="transition hover:text-white">Insights</a>
+                <a href="../FAQ/index.html" class="transition hover:text-white">FAQs</a>
+                <a
+                  href="../terms and conditions/index.html#privacy-policy"
+                  class="transition hover:text-white"
+                  >Privacy Policy</a
+                >
+                <a href="../terms and conditions/index.html" class="transition hover:text-white"
+                  >Terms &amp; Conditions</a
+                >
+              </nav>
+              <p class="text-sm text-secondary">
+                © Copyright 2024 -
+                <a
+                  href="../Home/index.html"
+                  class="bg-gradient-to-r from-[#ffffff] to-[#FF7A00] bg-clip-text font-semibold text-transparent transition hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF7A00]"
+                  >Echo Creations</a
+                >.
+                All Rights Reserved.
+              </p>
+            </div>
+          </div>
         </div>
-      </a>
+      </footer>
     </div>
-  </div>
-  
-</body>
+
+    <script>
+      (function () {
+        const currentPath = window.location.pathname.replace(/\\/g, "/");
+        const navLinks = document.querySelectorAll("[data-nav-link]");
+        navLinks.forEach((link) => {
+          const href = link.getAttribute("href");
+          if (!href) return;
+          const linkPath = new URL(href, window.location.origin)
+            .pathname.replace(/\\/g, "/");
+          if (currentPath.endsWith(linkPath)) {
+            link.classList.add(
+              "text-white",
+              "font-semibold",
+              "underline",
+              "decoration-2"
+            );
+            link.classList.remove("text-secondary");
+          } else {
+            link.classList.add("text-secondary", "hover:text-white", "transition-colors");
+          }
+        });
+
+        const toggleButton = document.querySelector("[data-mobile-toggle]");
+        const mobileMenu = document.getElementById("mobile-menu");
+        if (toggleButton && mobileMenu) {
+          const openIcon = toggleButton.querySelector("[data-open-icon]");
+          const closeIcon = toggleButton.querySelector("[data-close-icon]");
+
+          const setMenuState = (isOpen) => {
+            mobileMenu.classList.toggle("hidden", !isOpen);
+            toggleButton.setAttribute("aria-expanded", String(isOpen));
+            openIcon?.classList.toggle("hidden", isOpen);
+            closeIcon?.classList.toggle("hidden", !isOpen);
+          };
+
+          toggleButton.addEventListener("click", () => {
+            const isOpen = mobileMenu.classList.contains("hidden");
+            setMenuState(isOpen);
+          });
+
+          mobileMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => setMenuState(false));
+          });
+        }
+      })();
+    </script>
+  </body>
 </html>
