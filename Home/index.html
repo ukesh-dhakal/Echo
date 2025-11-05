@@ -1,772 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./vars.css">
-  <link rel="stylesheet" href="./style.css">
-  <script src='https://cdn.tailwindcss.com/3.2.0' ></script>
-  <script src="./tailwind.config.js"></script>
-  <style>
-   a,
-   button,
-   input,
-   select,
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   * {
-       box-sizing: border-box;
-       margin: 0;
-       padding: 0;
-       border: none;
-       text-decoration: none;
-       background: none;
-   
-       -webkit-font-smoothing: antialiased;
-   }
-   
-   menu, ol, ul {
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-   }
-   </style>
-  <title>Document</title>
-</head>
-<body>
-  <div class="bg-primary-bg h-[4220px] relative overflow-hidden">
-    <img
-      class="w-[100%] h-[auto] absolute right-[0%] left-[0%] top-0 overflow-visible"
-      src="mask-group0.svg"
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&display=swap"
+      rel="stylesheet"
     />
-    <div
-      class="bg-[rgba(17,16,19,0.8)] backdrop-blur-md border-b border-white/10 pt-6 pr-[60px] pb-6 pl-[60px] w-full h-[90px] fixed top-0 left-0 right-0 z-50"
-    >
-      <div
-        class="flex flex-row gap-3 items-center justify-start absolute left-[60px] top-6"
-      >
-        <img
-          class="shrink-0 w-[86.71px] h-[42px] relative"
-          style="object-fit: cover"
-          src="echo-creations-logo-copy-10.png"
-        />
-        <img
-          class="shrink-0 w-44 h-8 relative"
-          style="object-fit: cover"
-          src="echo-creations-logo-copy-20.png"
-        />
-      </div>
-      <nav
-        class="flex flex-row gap-8 items-center justify-start absolute left-[50%] top-[34px]"
-        style="translate: -50%"
-      >
-        <a
-          data-nav-link
-          href="./index.html"
-          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-        >
-          Home
-        </a>
-        <a
-          data-nav-link
-          href="../About/index.html"
-          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-        >
-          About
-        </a>
-        <a
-          data-nav-link
-          href="../Podcasts/index.html"
-          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-        >
-          Ankur’s Podcast
-        </a>
-        <a
-          data-nav-link
-          href="../Servics/index.html"
-          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-        >
-          Services
-        </a>
-        <a
-          data-nav-link
-          href="../Contact/index.html"
-          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-        >
-          Contact
-        </a>
-      </nav>
-      <script>
-        (function () {
-          const currentPath = window.location.pathname.replace(/\\/g, '/');
-          document.querySelectorAll('[data-nav-link]').forEach(link => {
-            const href = link.getAttribute('href');
-            if (!href) return;
-            const linkPath = new URL(href, window.location.origin).pathname.replace(/\\/g, '/');
-            if (currentPath.endsWith(linkPath)) {
-              link.classList.remove('text-secondary', 'text-gray-400');
-              link.classList.add(
-                'text-[#ffffff]',
-                'font-semibold',
-                'underline',
-                'decoration-2',
-                'decoration-[#ffffff]'
-              );
-            } else {
-              link.classList.add('text-gray-400', 'hover:text-[#ffffff]', 'transition-colors');
-            }
-          });
-        })();
-      </script>
+    <link rel="stylesheet" href="./vars.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.tailwindcss.com/3.2.0"></script>
+    <script src="./tailwind.config.js"></script>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
 
-      <a
-        class="bg-secondary rounded-[50px] pt-[9px] pr-6 pb-[9px] pl-6 flex flex-row gap-1 items-center justify-start absolute right-[60px] top-6"
-        href="../Inquiry/index.html"
+      body {
+        margin: 0;
+        font-family: "Urbanist", system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+        background-color: var(--primary-bg);
+        color: #ffffff;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    </style>
+    <title>Echo Creations</title>
+  </head>
+  <body class="min-h-screen bg-primary-bg text-white">
+    <div class="relative overflow-hidden">
+      <img
+        src="mask-group0.svg"
+        alt="Decorative gradient background"
+        class="pointer-events-none absolute inset-0 h-full w-full object-cover"
+      />
+
+      <header
+        class="sticky top-0 z-50 border-b border-white/10 bg-[rgba(17,16,19,0.82)] backdrop-blur-xl"
       >
-        <div
-          class="flex flex-row gap-1 items-center justify-start shrink-0 relative"
-        >
-          <div
-            class="text-[#ffffff] text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height font-body-16-font-weight relative"
+        <div class="mx-auto flex h-[90px] max-w-6xl items-center justify-between px-6">
+          <a href="./index.html" class="flex items-center gap-3">
+            <img
+              src="echo-creations-logo-copy-10.png"
+              alt="Echo Creations icon"
+              class="h-10 w-auto"
+            />
+            <img
+              src="echo-creations-logo-copy-20.png"
+              alt="Echo Creations wordmark"
+              class="h-8 w-auto"
+            />
+          </a>
+
+          <nav class="hidden gap-8 text-secondary md:flex" aria-label="Primary">
+            <a data-nav-link href="./index.html">Home</a>
+            <a data-nav-link href="../About/index.html">About</a>
+            <a data-nav-link href="../Podcasts/index.html">Ankur’s Podcast</a>
+            <a data-nav-link href="../Servics/index.html">Services</a>
+            <a data-nav-link href="../Contact/index.html">Contact</a>
+          </nav>
+
+          <a
+            href="../Inquiry/index.html"
+            class="inline-flex items-center gap-2 rounded-full bg-button-fill px-6 py-3 text-sm font-medium uppercase tracking-[0.12em] transition-colors hover:bg-secondary"
           >
-            Let’s Talk
-          </div>
-          <img
-            class="shrink-0 w-[21.34px] h-3 relative overflow-visible"
-            src="formkit-arrowright0.svg"
-          />
+            <span>Let’s Talk</span>
+            <img src="formkit-arrowright0.svg" alt="" class="h-3.5 w-5" />
+          </a>
         </div>
-      </a>
-    </div>
-    <div
-      class="flex flex-col gap-11 items-start justify-start w-[1184px] absolute left-[calc(50%_-_596px)] top-56"
-    >
-      <div
-        class="pl-2 flex flex-col gap-6 items-start justify-start self-stretch shrink-0 relative"
-      >
-        <div
-          class="text-secondary text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
-        >
-          Echo Creations
-        </div>
-        <div
-          class="text-left font-['Urbanist-SemiBold',_sans-serif] text-7xl leading-[84px] font-semibold relative"
-        >
-          <span>
-            <span class="crafting-stories-precising-in-media-craftsmanship-span text-white">
-              Crafting Stories
-              <br />
-              Precising in
-            </span>
-            <span class="crafting-stories-precising-in-media-craftsmanship-span2 text-gray-400">
-              Media Craftsmanship
-            </span>
-          </span>
-        </div>
-      </div>
-      <div
-        class="flex flex-row items-start justify-between self-stretch shrink-0 relative"
-      >
-        <div
-          class="rounded-[50px] flex flex-row gap-1 items-end justify-end shrink-0 w-[190px] h-[58px] relative"
-        >
-          <div class="shrink-0 w-[186.34px] h-[54px] static">
-            <div
-              class="rounded-[50px] border-solid border-button-fill border pt-4 pr-11 pb-4 pl-11 flex flex-row gap-1 items-center justify-start w-[186.34px] absolute left-[3.66px] top-1"
-            >
-              <div
-                class="text-[#ffffff] text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-              >
-                Let’s Talk
-              </div>
-              <img
-                class="shrink-0 w-[21.34px] h-3 relative overflow-visible"
-                src="formkit-arrowright1.svg"
-              />
-            </div>
-            <div
-              class="bg-button-fill rounded-[50px] pt-4 pr-11 pb-4 pl-11 flex flex-row gap-1 items-center justify-start w-[186.34px] absolute left-[3.66px] top-1"
-            >
-              <div
-                class="text-[#ffffff] text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-              >
-                Let’s Talk
-              </div>
-              <img
-                class="shrink-0 w-[21.34px] h-3 relative overflow-visible"
-                src="formkit-arrowright2.svg"
-              />
-            </div>
-          </div>
-        </div>
-        <div
-          class="text-secondary text-left font-text-des-20-font-family text-text-des-20-font-size leading-text-des-20-line-height font-text-des-20-font-weight relative w-[576px]"
-        >
-          Neque elementum vestibulum at egestas pellentesque habitant faucibus.
-          Iaculis dignissim enim ac ut augue maecenas pulvinar enim dolor.
-        </div>
-      </div>
-    </div>
-    <div
-      class="rounded-2xl flex flex-row gap-0 items-center justify-start absolute left-[50%] top-[712px] overflow-hidden"
-      style="translate: -50%"
-    >
-      <div
-        class="flex flex-row gap-2.5 items-center justify-start shrink-0 w-[294px] h-[294px] relative"
-      >
-        <img
-          class="shrink-0 w-[100%] h-[294px] absolute right-[0%] left-[0%] top-0 overflow-visible"
-          src="mask-group1.svg"
-        />
-        <div
-          class="p-4 flex flex-col items-start justify-between self-stretch flex-1 relative"
-        >
-          <div
-            class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
-          >
-            01
-          </div>
-          <div
-            class="flex flex-col gap-2 items-start justify-start self-stretch shrink-0 relative"
-          >
-            <div
-              class="text-[#ffffff] text-left font-title-20-font-family text-title-20-font-size leading-title-20-line-height font-title-20-font-weight relative self-stretch"
-            >
-              Podcasts
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="flex flex-row gap-2.5 items-center justify-start shrink-0 w-[294px] h-[294px] relative"
-      >
-        <img
-          class="shrink-0 w-[100%] h-[294px] absolute right-[0%] left-[0%] top-0 overflow-visible"
-          src="mask-group2.svg"
-        />
-        <div
-          class="p-4 flex flex-col items-start justify-between self-stretch flex-1 relative"
-        >
-          <div
-            class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
-          >
-            02
-          </div>
-          <div
-            class="text-[#ffffff] text-left font-title-20-font-family text-title-20-font-size leading-title-20-line-height font-title-20-font-weight relative self-stretch"
-          >
-            Documentaries
-          </div>
-        </div>
-      </div>
-      <div
-        class="flex flex-row gap-2.5 items-center justify-start shrink-0 w-[294px] h-[294px] relative"
-      >
-        <img
-          class="shrink-0 w-[100%] h-[294px] absolute right-[0%] left-[0%] top-0 overflow-visible"
-          src="mask-group3.svg"
-        />
-        <div
-          class="p-4 flex flex-col items-start justify-between self-stretch flex-1 relative"
-        >
-          <div
-            class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
-          >
-            03
-          </div>
-          <div
-            class="text-[#ffffff] text-left font-title-20-font-family text-title-20-font-size leading-title-20-line-height font-title-20-font-weight relative self-stretch"
-          >
-            Photography
-          </div>
-        </div>
-      </div>
-      <div
-        class="flex flex-row gap-2.5 items-center justify-start shrink-0 w-[294px] h-[294px] relative"
-      >
-        <img
-          class="shrink-0 w-[100%] h-[294px] absolute right-[0%] left-[0%] top-0 overflow-visible"
-          src="mask-group4.svg"
-        />
-        <div
-          class="p-4 flex flex-col items-start justify-between self-stretch flex-1 relative"
-        >
-          <div
-            class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight relative self-stretch"
-          >
-            04
-          </div>
-          <div
-            class="text-[#ffffff] text-left font-title-20-font-family text-title-20-font-size leading-title-20-line-height font-title-20-font-weight relative self-stretch"
-          >
-            Filmmaking
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="flex flex-col gap-8 items-start justify-start w-[1176px] absolute left-[50%] top-[1106px]"
-      style="translate: -50%"
-    >
-      <div
-        class="flex flex-row gap-[55px] items-center justify-start self-stretch shrink-0 relative"
-      >
-        <div
-          class="text-[#ffffff] text-left font-section-heading-font-family text-section-heading-font-size leading-section-heading-line-height font-section-heading-font-weight relative"
-        >
-          Featured
-        </div>
-      </div>
-      <div
-        class="p-8 flex flex-col gap-2.5 items-start justify-end self-stretch shrink-0 h-[662px] relative"
-      >
-        <img
-          class="shrink-0 w-[1176px] h-[662px] absolute left-0 top-0 overflow-visible"
-          src="mask-group5.svg"
-        />
-        <div
-          class="flex flex-col gap-4 items-start justify-start shrink-0 w-[204px] relative"
-        >
-          <div
-            class="text-[#ffffff] text-left font-text-32-font-family text-text-32-font-size font-text-32-font-weight relative"
-          >
-            Ankur’s Podcast
-          </div>
-          <div
-            class="flex flex-col gap-4 items-start justify-start self-stretch shrink-0 h-[42px] relative overflow-hidden"
-          >
-            <div
-              class="flex flex-row gap-3 items-center justify-start self-stretch shrink-0 h-[42px] relative"
-            >
-              <div
-                class="rounded-[50px] border-solid border-[#ffffff] border pt-[7px] pr-4 pb-[7px] pl-4 flex flex-row gap-2.5 items-center justify-center shrink-0 relative"
-              >
-                <div
-                  class="text-[#ffffff] text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative"
+      </header>
+
+      <main class="relative z-10">
+        <section class="mx-auto max-w-6xl px-6 pb-20 pt-24">
+          <div class="flex flex-col gap-12 lg:flex-row lg:items-end lg:justify-between">
+            <div class="max-w-2xl space-y-6">
+              <p class="text-secondary text-sm uppercase tracking-[0.4em]">
+                Echo Creations
+              </p>
+              <h1 class="text-4xl font-semibold leading-tight sm:text-5xl lg:text-[64px] lg:leading-[74px]">
+                Crafting Stories
+                <span class="block text-secondary">Precising in Media Craftsmanship</span>
+              </h1>
+              <p class="text-lg leading-8 text-secondary">
+                We partner with visionary brands to create podcasts, films, and experiences that resonate. From concept to final delivery, every story is produced with precision and heart.
+              </p>
+              <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+                <a
+                  href="../Inquiry/index.html"
+                  class="inline-flex items-center gap-2 rounded-full bg-button-fill px-8 py-4 text-sm font-semibold uppercase tracking-[0.14em] transition-transform hover:-translate-y-1 hover:bg-secondary"
                 >
-                  Podcast
+                  <span>Let’s Talk</span>
+                  <img src="formkit-arrowright1.svg" alt="" class="h-3.5 w-5" />
+                </a>
+                <a
+                  href="../Servics/index.html"
+                  class="inline-flex items-center gap-2 rounded-full border border-white/30 px-8 py-4 text-sm font-medium uppercase tracking-[0.14em] text-secondary transition hover:border-secondary hover:text-white"
+                >
+                  Explore Services
+                </a>
+              </div>
+            </div>
+            <div class="flex w-full max-w-md flex-col gap-4 rounded-3xl border border-white/10 bg-[rgba(12,11,14,0.6)] p-8 backdrop-blur">
+              <h2 class="text-lg font-medium text-secondary">Our Craft</h2>
+              <div class="space-y-3 text-sm text-secondary">
+                <p>• End-to-end media production tailored to your brand voice.</p>
+                <p>• Award-winning storytellers, editors, and producers.</p>
+                <p>• Agile teams that move from storyboard to final mix with speed.</p>
+              </div>
+              <a
+                href="../About/index.html"
+                class="inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:text-secondary"
+              >
+                About Our Studio
+                <img src="formkit-arrowright2.svg" alt="" class="h-3.5 w-5" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="mx-auto max-w-6xl px-6 pb-20">
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#1c1b20]">
+              <img
+                src="mask-group1.svg"
+                alt="Podcast production"
+                class="absolute inset-0 h-full w-full object-cover opacity-60 transition duration-500 group-hover:scale-110"
+              />
+              <div class="relative flex h-full flex-col justify-between p-6">
+                <span class="text-sm font-semibold text-secondary">01</span>
+                <div>
+                  <h3 class="text-2xl font-semibold">Podcasts</h3>
+                  <p class="mt-2 text-sm text-secondary">
+                    Strategy, production, and distribution for binge-worthy series.
+                  </p>
                 </div>
               </div>
-              <div
-                class="rounded-[50px] border-solid border-[#ffffff] border pt-[7px] pr-4 pb-[7px] pl-4 flex flex-row gap-2.5 items-center justify-center shrink-0 relative"
-              >
-                <div
-                  class="text-[#ffffff] text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative"
-                >
-                  Insights
+            </article>
+            <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#1c1b20]">
+              <img
+                src="mask-group2.svg"
+                alt="Documentary filmmaking"
+                class="absolute inset-0 h-full w-full object-cover opacity-60 transition duration-500 group-hover:scale-110"
+              />
+              <div class="relative flex h-full flex-col justify-between p-6">
+                <span class="text-sm font-semibold text-secondary">02</span>
+                <div>
+                  <h3 class="text-2xl font-semibold">Documentaries</h3>
+                  <p class="mt-2 text-sm text-secondary">
+                    Long-form narratives that inform, inspire, and ignite action.
+                  </p>
                 </div>
               </div>
-            </div>
-            <div
-              class="flex flex-row gap-2 items-center justify-start shrink-0 h-[42px] relative"
-            >
-              <div
-                class="text-[#ffffff] text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+            </article>
+            <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#1c1b20]">
+              <img
+                src="mask-group3.svg"
+                alt="Photography lighting setup"
+                class="absolute inset-0 h-full w-full object-cover opacity-60 transition duration-500 group-hover:scale-110"
+              />
+              <div class="relative flex h-full flex-col justify-between p-6">
+                <span class="text-sm font-semibold text-secondary">03</span>
+                <div>
+                  <h3 class="text-2xl font-semibold">Photography</h3>
+                  <p class="mt-2 text-sm text-secondary">
+                    Editorial imagery that captures the heart of every moment.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article class="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#1c1b20]">
+              <img
+                src="mask-group4.svg"
+                alt="Filmmaking equipment"
+                class="absolute inset-0 h-full w-full object-cover opacity-60 transition duration-500 group-hover:scale-110"
+              />
+              <div class="relative flex h-full flex-col justify-between p-6">
+                <span class="text-sm font-semibold text-secondary">04</span>
+                <div>
+                  <h3 class="text-2xl font-semibold">Filmmaking</h3>
+                  <p class="mt-2 text-sm text-secondary">
+                    High-impact films engineered for cinema and brand launches.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="mx-auto max-w-6xl px-6 pb-24">
+          <div class="flex flex-col gap-10 lg:flex-row lg:items-center">
+            <div class="flex-1 space-y-6">
+              <p class="text-sm uppercase tracking-[0.4em] text-secondary">Featured</p>
+              <h2 class="text-4xl font-semibold leading-tight">
+                The Studio Behind Ankur’s Podcast
+              </h2>
+              <p class="text-lg leading-8 text-secondary">
+                Step onto the set where stories take shape. From pre-production to the final mix, our team engineers immersive soundscapes, cinematic visuals, and unforgettable narratives.
+              </p>
+              <div class="flex flex-wrap items-center gap-3">
+                <span class="inline-flex items-center rounded-full border border-white/40 px-4 py-2 text-sm uppercase tracking-[0.24em] text-secondary">Podcast</span>
+                <span class="inline-flex items-center rounded-full border border-white/40 px-4 py-2 text-sm uppercase tracking-[0.24em] text-secondary">Insights</span>
+              </div>
+              <a
+                href="../Insights/index.html"
+                class="inline-flex items-center gap-2 text-base font-semibold text-white transition hover:text-secondary"
               >
                 Know More
-              </div>
-              <div
-                class="border-solid border-[#ffffff] border-t border-r-[0] border-b-[0] border-l-[0] shrink-0 w-6 h-0 relative"
-                style="margin-top: -1px"
-              ></div>
+                <span aria-hidden="true" class="inline-flex h-6 w-6 items-center justify-center text-secondary">→</span>
+              </a>
+            </div>
+            <div class="relative flex-1 overflow-hidden rounded-[32px] border border-white/10">
+              <img
+                src="mask-group5.svg"
+                alt="Featured studio"
+                class="h-full w-full object-cover"
+              />
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="flex flex-col gap-8 items-start justify-start w-[1176px] absolute left-[50%] top-[1956px]"
-      style="translate: -50%"
-    >
-      <div
-        class="flex flex-col gap-6 items-start justify-start self-stretch shrink-0 relative"
-      >
-        <div
-          class="text-left font-section-heading-font-family text-section-heading-font-size leading-section-heading-line-height font-section-heading-font-weight relative self-stretch"
-        >
-          <span>
-            <span
-              class="laoreet-eget-diam-lobortis-maecenas-ut-nunc-aenean-sed-enim-viverra-amet-condimentum-velit-span"
-            >
-              Laoreet eget diam lobortis maecenas. Ut nunc aenean sed enim viverra
-              amet
-            </span>
-            <span
-              class="laoreet-eget-diam-lobortis-maecenas-ut-nunc-aenean-sed-enim-viverra-amet-condimentum-velit-span2"
-            >
-              condimentum velit.
-            </span>
-          </span>
-        </div>
-        <div
-          class="text-[#ffffff] text-left font-text-des-20-font-family text-text-des-20-font-size leading-text-des-20-line-height font-text-des-20-font-weight relative w-[876px]"
-        >
-          Fringilla sed tincidunt purus est elementum id quam nulla aliquet. Non
-          urna tellus morbi sed enim donec condimentum enim in. Sed ac phasellus
-          tristique sed cras vitae cras ac nunc.
-        </div>
-      </div>
-      <div
-        class="rounded-[50px] border-solid border-secondary border pt-4 pr-11 pb-4 pl-11 flex flex-row gap-1 items-center justify-start shrink-0 relative"
-      >
-        <div
-          class="flex flex-row gap-1 items-center justify-start shrink-0 relative"
-        >
-          <div
-            class="text-[#ffffff] text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
-          >
-            About Us
-          </div>
-          <img
-            class="shrink-0 w-[21.34px] h-3 relative overflow-visible"
-            src="formkit-arrowright3.svg"
-          />
-        </div>
-      </div>
-    </div>
-    <div
-      class="bg-bg-2 pt-[100px] pr-[132px] pb-[100px] pl-[132px] flex flex-col gap-2.5 items-center justify-start w-[100%] absolute right-[0%] left-[0%] top-[2342px]"
-    >
-      <div
-        class="flex flex-col gap-[52px] items-center justify-start shrink-0 relative"
-      >
-        <div
-          class="text-[#ffffff] text-center font-section-heading-font-family text-section-heading-font-size leading-section-heading-line-height font-section-heading-font-weight relative self-stretch"
-        >
-          What they’re saying
-        </div>
-        <div
-          class="flex flex-row gap-6 items-center justify-start self-stretch shrink-0 relative"
-        >
-          <div
-            class="flex flex-col items-start justify-between shrink-0 w-[376px] h-[352px] relative"
-          >
-            <img
-              class="rounded-none shrink-0 w-[376px] h-[352px] absolute left-0 top-0 overflow-visible"
-              src="subtract0.svg"
-            />
-            <div
-              class="p-6 flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative"
-            >
-              <img
-                class="shrink-0 w-11 h-11 relative overflow-visible"
-                src="fa-solid-quote-left0.svg"
-              />
-              <div
-                class="text-[#ffffff] text-left font-text-des-20-font-family text-text-des-20-font-size leading-text-des-20-line-height font-text-des-20-font-weight relative self-stretch"
-              >
-                A tristique diam nunc consectetur laoreet nisl donec malesuada.
-                Venenatis purus aliquet consequat nam eget faucibus molestie.
-              </div>
-            </div>
-            <div
-              class="pt-4 pr-4 pb-4 flex flex-row gap-3 items-center justify-start shrink-0 h-[88px] relative"
-            >
-              <img
-                class="shrink-0 w-[60px] h-[60px] relative overflow-visible"
-                src="mask-group6.svg"
-              />
-              <div
-                class="flex flex-col gap-2 items-start justify-start shrink-0 relative"
-              >
-                <div
-                  class="text-[#ffffff] text-left font-title-20-font-family text-title-20-font-size leading-title-20-line-height font-title-20-font-weight relative"
-                >
-                  Miguel Keeling
-                </div>
-                <div
-                  class="text-[#ffffff] text-left font-body-14-font-family text-body-14-font-size leading-body-14-line-height font-body-14-font-weight relative"
-                >
-                  District Officer
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex flex-col items-start justify-between shrink-0 w-[376px] h-[352px] relative"
-          >
-            <img
-              class="rounded-none shrink-0 w-[376px] h-[352px] absolute left-0 top-0 overflow-visible"
-              src="subtract1.svg"
-            />
-            <div
-              class="p-6 flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative"
-            >
-              <img
-                class="shrink-0 w-11 h-11 relative overflow-visible"
-                src="fa-solid-quote-left1.svg"
-              />
-              <div
-                class="text-[#ffffff] text-left font-text-des-20-font-family text-text-des-20-font-size leading-text-des-20-line-height font-text-des-20-font-weight relative self-stretch"
-              >
-                Neque sollicitudin neque sit placerat. Tellus eu fermentum
-                volutpat fermentum sit facilisis in. Blandit eros massa sit
-                bibendum viverra mauris enim donec praesent.
-              </div>
-            </div>
-            <div
-              class="pt-4 pr-4 pb-4 flex flex-row gap-3 items-center justify-start shrink-0 h-[88px] relative"
-            >
-              <img
-                class="shrink-0 w-[60px] h-[60px] relative overflow-visible"
-                src="mask-group7.svg"
-              />
-              <div
-                class="flex flex-col gap-2 items-start justify-start shrink-0 relative"
-              >
-                <div
-                  class="text-[#ffffff] text-left font-title-20-font-family text-title-20-font-size leading-title-20-line-height font-title-20-font-weight relative"
-                >
-                  Moses Zieme
-                </div>
-                <div
-                  class="text-[#ffffff] text-left font-body-14-font-family text-body-14-font-size leading-body-14-line-height font-body-14-font-weight relative"
-                >
-                  Forward Tactics Specialist
-                </div>
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex flex-col items-start justify-between shrink-0 w-[376px] h-[352px] relative"
-          >
-            <img
-              class="rounded-none shrink-0 w-[376px] h-[352px] absolute left-0 top-0 overflow-visible"
-              src="subtract2.svg"
-            />
-            <div
-              class="p-6 flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative"
-            >
-              <img
-                class="shrink-0 w-11 h-11 relative overflow-visible"
-                src="fa-solid-quote-left2.svg"
-              />
-              <div
-                class="text-[#ffffff] text-left font-text-des-20-font-family text-text-des-20-font-size leading-text-des-20-line-height font-text-des-20-font-weight relative self-stretch"
-              >
-                Eu feugiat malesuada lorem in fermentum lorem mi ut. Lorem
-                interdum id odio morbi. Scelerisque purus non nec curabitur risus
-                nibh.
-              </div>
-            </div>
-            <div
-              class="pt-4 pr-4 pb-4 flex flex-row gap-3 items-center justify-start shrink-0 h-[88px] relative"
-            >
-              <img
-                class="shrink-0 w-[60px] h-[60px] relative overflow-visible"
-                src="mask-group8.svg"
-              />
-              <div
-                class="flex flex-col gap-2 items-start justify-start shrink-0 relative"
-              >
-                <div
-                  class="text-[#ffffff] text-left font-title-20-font-family text-title-20-font-size leading-title-20-line-height font-title-20-font-weight relative"
-                >
-                  Daisy Lowe
-                </div>
-                <div
-                  class="text-[#ffffff] text-left font-body-14-font-family text-body-14-font-size leading-body-14-line-height font-body-14-font-weight relative"
-                >
-                  Human Brand Officer
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex flex-row gap-1 items-center justify-start shrink-0 relative"
-        >
-          <div class="bg-secondary rounded shrink-0 w-4 h-1 relative"></div>
-          <div class="bg-button-fill rounded shrink-0 w-4 h-1 relative"></div>
-          <div class="bg-button-fill rounded shrink-0 w-4 h-1 relative"></div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="flex flex-col gap-8 items-start justify-start w-[1176px] absolute left-[50%] top-[3158px]"
-      style="translate: -50%"
-    >
-      <div
-        class="flex flex-col gap-4 items-start justify-start self-stretch shrink-0 relative md:flex-row md:items-center md:justify-between"
-      >
-        <div
-          class="text-[#ffffff] text-left font-section-heading-font-family text-section-heading-font-size leading-section-heading-line-height font-section-heading-font-weight relative"
-        >
-          Latest Insights
-        </div>
-        <a
-          href="../Insights/index.html"
-          class="rounded-[50px] border-solid border-secondary border pt-4 pr-11 pb-4 pl-11 flex flex-row gap-1 items-center justify-start shrink-0 relative text-[#ffffff] transition-colors hover:bg-secondary/10 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-[#0f0e11]"
-        >
-          <span
-            class="text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight"
-          >
-            View All
-          </span>
-          <img
-            class="shrink-0 w-[21.34px] h-3 relative overflow-visible"
-            src="formkit-arrowright4.svg"
-            alt=""
-            aria-hidden="true"
-          />
-        </a>
-      </div>
-      <div class="flex flex-col gap-6 items-start justify-start self-stretch shrink-0 relative lg:flex-row">
-        <a
-          href="../Insights-Single/index.html"
-          class="group relative flex-1 min-h-[360px] overflow-hidden rounded-[32px] focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-[#0f0e11]"
-        >
-          <img
-            class="absolute inset-0 h-full w-full object-cover"
-            src="mask-group9.svg"
-            alt="Team collaborating in a podcast studio"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#0f0e11] via-[#0f0e11]/40 to-transparent transition-opacity group-hover:from-[#0f0e11]/90"></div>
-          <div class="relative flex h-full flex-col justify-end gap-4 p-8">
-            <div
-              class="text-secondary text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height font-body-16-font-weight"
-            >
-              December 13, 2024
-            </div>
-            <h3
-              class="text-[#ffffff] text-left font-title-24-font-family text-[32px] leading-[40px] font-title-24-font-weight"
-            >
-              Why Podcasts Are the Future of Storytelling and Branding
-            </h3>
-            <p
-              class="text-[#d1d1d6] text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height"
-            >
-              Discover how immersive audio experiences help brands create deep connections and memorable narratives with their audiences.
+        </section>
+
+        <section class="mx-auto max-w-5xl px-6 pb-24">
+          <div class="rounded-[32px] border border-white/10 bg-[#1c1b20] p-10 text-center">
+            <h2 class="text-3xl font-semibold leading-snug">
+              Laoreet eget diam lobortis maecenas. Ut nunc aenean sed enim viverra amet condimentum velit.
+            </h2>
+            <p class="mt-4 text-lg leading-8 text-secondary">
+              Fringilla sed tincidunt purus est elementum id quam nulla aliquet. Non urna tellus morbi sed enim donec condimentum enim in. Sed ac phasellus tristique sed cras vitae cras ac nunc.
             </p>
-            <span
-              class="inline-flex items-center gap-2 text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight"
+            <a
+              href="../About/index.html"
+              class="mt-8 inline-flex items-center gap-2 rounded-full border border-secondary px-10 py-4 text-sm font-medium uppercase tracking-[0.18em] text-white transition hover:-translate-y-1 hover:border-white"
             >
-              Read Story
-              <img
-                class="h-3 w-[21.34px] overflow-visible"
-                src="formkit-arrowright4.svg"
-                alt=""
-                aria-hidden="true"
-              />
-            </span>
+              About Us
+              <img src="formkit-arrowright3.svg" alt="" class="h-3.5 w-5" />
+            </a>
           </div>
-        </a>
-        <div class="flex w-full flex-col gap-6 lg:w-[376px]">
-          <a
-            href="../Insights/index.html"
-            class="group flex flex-col overflow-hidden rounded-[32px] border border-white/10 bg-[#1c1b20] transition-transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-[#0f0e11]"
-          >
-            <img
-              class="h-[212px] w-full object-cover"
-              src="mask-group10.svg"
-              alt="Cameras and lighting setup in a studio"
-            />
-            <div class="flex flex-col gap-2 p-6">
-              <div
-                class="text-secondary text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height font-body-16-font-weight"
-              >
-                December 13, 2024
+        </section>
+
+        <section class="bg-bg-2/60">
+          <div class="mx-auto max-w-6xl px-6 py-24">
+            <div class="text-center">
+              <p class="text-sm uppercase tracking-[0.4em] text-secondary">
+                What they’re saying
+              </p>
+              <h2 class="mt-4 text-4xl font-semibold">Stories from our partners</h2>
+            </div>
+            <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <article class="flex h-full flex-col gap-6 rounded-[28px] border border-white/10 bg-[#1c1b20] p-8">
+                <img src="fa-solid-quote-left0.svg" alt="Quote" class="h-10 w-10" />
+                <p class="text-secondary">
+                  “A tristique diam nunc consectetur laoreet nisl donec malesuada. Venenatis purus aliquet consequat nam eget faucibus molestie.”
+                </p>
+                <div class="mt-auto flex items-center gap-4">
+                  <img
+                    src="mask-group6.svg"
+                    alt="Portrait of Miguel Keeling"
+                    class="h-14 w-14 rounded-full object-cover"
+                  />
+                  <div>
+                    <p class="text-lg font-semibold">Miguel Keeling</p>
+                    <p class="text-sm text-secondary">District Officer</p>
+                  </div>
+                </div>
+              </article>
+              <article class="flex h-full flex-col gap-6 rounded-[28px] border border-white/10 bg-[#1c1b20] p-8">
+                <img src="fa-solid-quote-left1.svg" alt="Quote" class="h-10 w-10" />
+                <p class="text-secondary">
+                  “Neque sollicitudin neque sit placerat. Tellus eu fermentum volutpat sit facilisis in. Blandit eros massa sit bibendum viverra mauris.”
+                </p>
+                <div class="mt-auto flex items-center gap-4">
+                  <img
+                    src="mask-group7.svg"
+                    alt="Portrait of Demi Wilkinson"
+                    class="h-14 w-14 rounded-full object-cover"
+                  />
+                  <div>
+                    <p class="text-lg font-semibold">Demi Wilkinson</p>
+                    <p class="text-sm text-secondary">Television Producer</p>
+                  </div>
+                </div>
+              </article>
+              <article class="flex h-full flex-col gap-6 rounded-[28px] border border-white/10 bg-[#1c1b20] p-8">
+                <img src="fa-solid-quote-left2.svg" alt="Quote" class="h-10 w-10" />
+                <p class="text-secondary">
+                  “Egestas purus aliquet lorem in elementum aliquet. Etiam sed risus lectus id sit orci velit pharetra.”
+                </p>
+                <div class="mt-auto flex items-center gap-4">
+                  <img
+                    src="mask-group8.svg"
+                    alt="Portrait of John Carter"
+                    class="h-14 w-14 rounded-full object-cover"
+                  />
+                  <div>
+                    <p class="text-lg font-semibold">John Carter</p>
+                    <p class="text-sm text-secondary">Creative Director</p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="mx-auto max-w-6xl px-6 py-24">
+          <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p class="text-sm uppercase tracking-[0.4em] text-secondary">
+                Latest Insights
+              </p>
+              <h2 class="mt-3 text-4xl font-semibold">Fresh perspectives from the studio</h2>
+            </div>
+            <a
+              href="../Insights/index.html"
+              class="inline-flex items-center gap-2 text-base font-semibold text-secondary transition hover:text-white"
+            >
+              View All Insights
+              <img src="formkit-arrowright4.svg" alt="" class="h-3.5 w-5" />
+            </a>
+          </div>
+          <div class="mt-12 grid gap-6 lg:grid-cols-3">
+            <a
+              href="../Insights/index.html"
+              class="group flex flex-col overflow-hidden rounded-[32px] border border-white/10 bg-[#1c1b20] transition-transform hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f0e11]"
+            >
+              <img
+                src="mask-group9.svg"
+                alt="Woman speaking on podcast"
+                class="h-[212px] w-full object-cover"
+              />
+              <div class="flex flex-col gap-2 p-6">
+                <p class="text-secondary text-sm uppercase tracking-[0.24em]">
+                  December 13, 2024
+                </p>
+                <h3 class="text-2xl font-semibold">
+                  Crafting Clarity: Producing Podcasts with Purpose
+                </h3>
+                <p class="text-secondary text-sm">
+                  Discover how intentional storytelling and technical excellence power every show we deliver.
+                </p>
               </div>
-              <h4
-                class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight"
+            </a>
+            <a
+              href="../Insights/index.html"
+              class="group flex flex-col overflow-hidden rounded-[32px] border border-white/10 bg-[#1c1b20] transition-transform hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f0e11]"
+            >
+              <img
+                src="mask-group10.svg"
+                alt="Video production team"
+                class="h-[212px] w-full object-cover"
+              />
+              <div class="flex flex-col gap-2 p-6">
+                <p class="text-secondary text-sm uppercase tracking-[0.24em]">
+                  December 13, 2024
+                </p>
+                <h3 class="text-2xl font-semibold">
+                  A Day in the Life of a Media Creation Studio
+                </h3>
+                <p class="text-secondary text-sm">
+                  Step into our studio to see how each project comes together from the first brainstorm to the final cut.
+                </p>
+              </div>
+            </a>
+            <a
+              href="../Insights/index.html"
+              class="group flex flex-col overflow-hidden rounded-[32px] border border-white/10 bg-[#1c1b20] transition-transform hover:-translate-y-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#0f0e11]"
+            >
+              <img
+                src="mask-group11.svg"
+                alt="Photographer capturing creative portraits"
+                class="h-[212px] w-full object-cover"
+              />
+              <div class="flex flex-col gap-2 p-6">
+                <p class="text-secondary text-sm uppercase tracking-[0.24em]">
+                  December 13, 2024
+                </p>
+                <h3 class="text-2xl font-semibold">
+                  Behind the Lens: The Art of Storytelling Through Photography
+                </h3>
+                <p class="text-secondary text-sm">
+                  Explore our approach to capturing emotion and narrative through a single still frame.
+                </p>
+              </div>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <footer class="border-t border-secondary bg-transparent">
+        <div class="mx-auto flex max-w-5xl flex-col gap-16 px-6 py-24 text-center">
+          <div class="space-y-8">
+            <h2 class="text-4xl font-semibold">Create. Inspire. Subscribe.</h2>
+            <form
+              class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center"
+              onsubmit="return false;"
+            >
+              <label for="footer-email" class="sr-only">Email Address</label>
+              <input
+                id="footer-email"
+                type="email"
+                placeholder="Email Address"
+                class="w-full rounded-full border border-button-fill bg-transparent px-6 py-4 text-base text-white placeholder:text-[#9B9B9B] focus:outline-none focus:ring-2 focus:ring-button-fill"
+              />
+              <button
+                type="submit"
+                class="flex w-full items-center justify-center gap-2 rounded-full bg-button-fill px-8 py-4 text-sm font-semibold uppercase tracking-[0.24em] transition hover:bg-secondary sm:w-auto"
               >
-                A Day in the Life of a Media Creation Studio
-              </h4>
-              <p class="text-[#d1d1d6] text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height">
-                Step into our studio to see how each project comes together from the first brainstorm to the final cut.
+                Subscribe
+                <img src="group0.svg" alt="" class="h-6 w-6" />
+              </button>
+            </form>
+          </div>
+
+          <div class="flex flex-col items-center gap-10">
+            <div class="flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="https://www.facebook.com"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1E24] transition hover:border-secondary"
+                aria-label="Facebook"
+              >
+                <img src="ri-facebook-fill0.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.linkedin.com"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1E24] transition hover:border-secondary"
+                aria-label="LinkedIn"
+              >
+                <img src="mdi-linkedin0.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.tiktok.com"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1E24] transition hover:border-secondary"
+                aria-label="TikTok"
+              >
+                <img src="ic-baseline-tiktok0.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.youtube.com"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1E24] transition hover:border-secondary"
+                aria-label="YouTube"
+              >
+                <img src="mdi-youtube0.svg" alt="" class="h-6 w-6" />
+              </a>
+              <a
+                href="https://www.whatsapp.com"
+                class="flex h-12 w-12 items-center justify-center rounded-full border border-[#1F1E24] transition hover:border-secondary"
+                aria-label="WhatsApp"
+              >
+                <img src="ri-whatsapp-fill0.svg" alt="" class="h-6 w-6" />
+              </a>
+            </div>
+
+            <div class="flex flex-col items-center gap-6 border-t border-[#1F1E24] pt-8">
+              <nav class="flex flex-wrap justify-center gap-6 text-sm text-secondary">
+                <a href="../Insights/index.html" class="transition hover:text-white">Insights</a>
+                <a href="../FAQ/index.html" class="transition hover:text-white">FAQs</a>
+                <a
+                  href="../terms and conditions/index.html#privacy-policy"
+                  class="transition hover:text-white"
+                  >Privacy Policy</a
+                >
+                <a href="../terms and conditions/index.html" class="transition hover:text-white"
+                  >Terms &amp; Conditions</a
+                >
+              </nav>
+              <p class="text-sm text-secondary">
+                © Copyright 2024 -
+                <a
+                  href="../Home/index.html"
+                  class="bg-gradient-to-r from-[#ffffff] to-[#FF7A00] bg-clip-text font-semibold text-transparent transition hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FF7A00]"
+                  >Echo Creations</a
+                >.
+                All Rights Reserved.
               </p>
             </div>
-          </a>
-          <a
-            href="../Insights/index.html"
-            class="group flex flex-col overflow-hidden rounded-[32px] border border-white/10 bg-[#1c1b20] transition-transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2 focus:ring-offset-[#0f0e11]"
-          >
-            <img
-              class="h-[212px] w-full object-cover"
-              src="mask-group11.svg"
-              alt="Photographer capturing creative portraits"
-            />
-            <div class="flex flex-col gap-2 p-6">
-              <div
-                class="text-secondary text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height font-body-16-font-weight"
-              >
-                December 13, 2024
-              </div>
-              <h4
-                class="text-[#ffffff] text-left font-title-24-font-family text-title-24-font-size leading-title-24-line-height font-title-24-font-weight"
-              >
-                Behind the Lens: The Art of Storytelling Through Photography
-              </h4>
-              <p class="text-[#d1d1d6] text-left font-body-16-font-family text-body-16-font-size leading-body-16-line-height">
-                Explore our approach to capturing emotion and narrative through a single still frame.
-              </p>
-            </div>
-          </a>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
-    <footer
-      class="border-solid border-secondary border-t pt-[100px] pr-[132px] pb-8 pl-[132px] flex flex-col gap-[60px] items-center justify-start w-[100%] absolute right-[0%] left-[0%] top-[3677px]"
-    >
-      <div class="flex flex-col gap-[60px] items-center justify-start w-full max-w-[776px]">
-        <div class="flex flex-col gap-8 items-center justify-start w-full text-center">
-          <div class="text-[#ffffff] text-center font-section-heading-font-family text-section-heading-font-size leading-section-heading-line-height font-section-heading-font-weight">
-            Create. Inspire. Subscribe.
-          </div>
-          <form class="flex flex-col gap-4 items-center justify-start w-full sm:flex-row sm:items-center sm:justify-center" onsubmit="return false;">
-            <label for="footer-email" class="sr-only">Email Address</label>
-            <input
-              id="footer-email"
-              type="email"
-              placeholder="Email Address"
-              class="w-full sm:flex-1 rounded-full border border-button-fill bg-transparent px-6 py-[17px] text-[#ffffff] font-body-18-font-family text-body-18-font-size leading-body-18-line-height placeholder:text-[#9B9B9B] focus:outline-none focus:ring-2 focus:ring-button-fill"
-            />
-            <button
-              type="submit"
-              class="w-full sm:w-auto bg-button-fill rounded-full px-7 py-[17px] flex flex-row gap-2 items-center justify-center uppercase text-[#ffffff] font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight tracking-[0.08em] transition-colors hover:bg-secondary"
-            >
-              <span>Subscribe</span>
-              <img class="w-7 h-7" src="group0.svg" alt="" />
-            </button>
-          </form>
-        </div>
-        <div class="flex flex-col gap-10 items-center justify-start w-full">
-          <div class="flex flex-wrap gap-4 items-center justify-center w-full">
-            <a href="https://www.facebook.com" class="flex items-center justify-center w-12 h-12 rounded-full border border-[#1F1E24] hover:border-secondary transition-colors" aria-label="Facebook">
-              <img class="w-6 h-6" src="ri-facebook-fill0.svg" alt="" />
-            </a>
-            <a href="https://www.linkedin.com" class="flex items-center justify-center w-12 h-12 rounded-full border border-[#1F1E24] hover:border-secondary transition-colors" aria-label="LinkedIn">
-              <img class="w-6 h-6" src="mdi-linkedin0.svg" alt="" />
-            </a>
-            <a href="https://www.tiktok.com" class="flex items-center justify-center w-12 h-12 rounded-full border border-[#1F1E24] hover:border-secondary transition-colors" aria-label="TikTok">
-              <img class="w-6 h-6" src="ic-baseline-tiktok0.svg" alt="" />
-            </a>
-            <a href="https://www.youtube.com" class="flex items-center justify-center w-12 h-12 rounded-full border border-[#1F1E24] hover:border-secondary transition-colors" aria-label="YouTube">
-              <img class="w-6 h-6" src="mdi-youtube0.svg" alt="" />
-            </a>
-            <a href="https://www.whatsapp.com" class="flex items-center justify-center w-12 h-12 rounded-full border border-[#1F1E24] hover:border-secondary transition-colors" aria-label="WhatsApp">
-              <img class="w-6 h-6" src="ri-whatsapp-fill0.svg" alt="" />
-            </a>
-          </div>
-          <div class="flex flex-col gap-6 items-center justify-start w-full border-t border-[#1F1E24] pt-8">
-            <div class="flex flex-wrap gap-6 items-center justify-center text-center">
-              <a href="../Insights/index.html" class="text-[#ffffff] font-body-18-font-family text-body-18-font-size leading-body-18-line-height hover:text-secondary transition-colors">Insights</a>
-              <a href="../FAQ/index.html" class="text-[#ffffff] font-body-18-font-family text-body-18-font-size leading-body-18-line-height hover:text-secondary transition-colors">FAQs</a>
-              <a href="../terms and conditions/index.html#privacy-policy" class="text-[#ffffff] font-body-18-font-family text-body-18-font-size leading-body-18-line-height hover:text-secondary transition-colors">Privacy Policy</a>
-              <a href="../terms and conditions/index.html" class="text-[#ffffff] font-body-18-font-family text-body-18-font-size leading-body-18-line-height hover:text-secondary transition-colors">Terms &amp; Conditions</a>
-            </div>
-            <p class="text-center text-[#9B9B9B] font-body-18-font-family text-body-18-font-size leading-body-18-line-height">
-              © Copyright 2024 - <a href="../Home/index.html" class="text-transparent bg-clip-text bg-gradient-to-r from-[#ffffff] to-[#FF7A00] font-semibold transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FF7A00]">Echo Creations</a>. All Rights Reserved.
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </div>
-  
-</body>
+
+    <script>
+      (function () {
+        const currentPath = window.location.pathname.replace(/\\/g, "/");
+        document.querySelectorAll("[data-nav-link]").forEach((link) => {
+          const href = link.getAttribute("href");
+          if (!href) return;
+          const linkPath = new URL(href, window.location.origin)
+            .pathname.replace(/\\/g, "/");
+          if (currentPath.endsWith(linkPath)) {
+            link.classList.add("text-white", "font-semibold", "underline", "decoration-2");
+            link.classList.remove("text-secondary");
+          } else {
+            link.classList.add("text-secondary", "hover:text-white", "transition-colors");
+          }
+        });
+      })();
+    </script>
+  </body>
 </html>
