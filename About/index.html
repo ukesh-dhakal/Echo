@@ -253,30 +253,34 @@
           <div
             class="flex flex-row gap-6 items-center justify-start shrink-0 relative"
           >
-            <div
+            <a
+              href="../Insights/index.html"
               class="text-[#ffffff] text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative"
               style="text-decoration: underline"
             >
               Insights
-            </div>
-            <div
+            </a>
+            <a
+              href="../FAQ/index.html"
               class="text-[#ffffff] text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative"
               style="text-decoration: underline"
             >
               FAQs
-            </div>
-            <div
+            </a>
+            <a
+              href="../terms and conditions/index.html#privacy-policy"
               class="text-[#ffffff] text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative"
               style="text-decoration: underline"
             >
               Privacy Policy
-            </div>
-            <div
+            </a>
+            <a
+              href="../terms and conditions/index.html"
               class="text-[#ffffff] text-left font-body-18-font-family text-body-18-font-size leading-body-18-line-height font-body-18-font-weight relative"
               style="text-decoration: underline"
             >
               Terms &amp; Conditions
-            </div>
+            </a>
           </div>
           <div
             class="text-left font-['-',_sans-serif] text-lg leading-[0undefined] font-normal relative"
@@ -341,69 +345,72 @@
           src="echo-creations-logo-copy-20.png"
         />
       </div>
-      <div
+      <nav
         class="flex flex-row gap-8 items-center justify-start absolute left-[50%] top-[34px]"
         style="translate: -50%"
       >
-   <a
-  href="#"
-  class="text-[#ffffff] text-left font-semibold-18-font-family text-semibold-18-font-size font-semibold-18-font-weight relative"
->
-  Home
-</a>
-<a
-  href="../About/index.html"
-  class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
->
-  About
-</a>
-<a
-  href="../Services-Single/index.html"
-  class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
->
-  Ankur’s Podcast
-</a>
-<a
-  href="../Servics/index.html"
-  class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
->
-  Services
-</a>
-<a
-  href="../Contact/index.html"
-  class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
->
-  Contact
-</a>
+        <a
+          data-nav-link
+          href="../Home/index.html"
+          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+        >
+          Home
+        </a>
+        <a
+          data-nav-link
+          href="index.html"
+          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+        >
+          About
+        </a>
+        <a
+          data-nav-link
+          href="../Podcasts/index.html"
+          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+        >
+          Ankur’s Podcast
+        </a>
+        <a
+          data-nav-link
+          href="../Servics/index.html"
+          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+        >
+          Services
+        </a>
+        <a
+          data-nav-link
+          href="../Contact/index.html"
+          class="text-secondary text-left font-button-text-18-font-family text-button-text-18-font-size font-button-text-18-font-weight relative"
+        >
+          Contact
+        </a>
+      </nav>
+      <script>
+        (function () {
+          const currentPath = window.location.pathname.replace(/\\/g, '/');
+          document.querySelectorAll('[data-nav-link]').forEach(link => {
+            const href = link.getAttribute('href');
+            if (!href) return;
+            const linkPath = new URL(href, window.location.origin).pathname.replace(/\\/g, '/');
+            if (currentPath.endsWith(linkPath)) {
+              link.classList.remove('text-secondary', 'text-gray-400');
+              link.classList.add(
+                'text-[#ffffff]',
+                'font-semibold',
+                'underline',
+                'decoration-2',
+                'decoration-[#ffffff]'
+              );
+            } else {
+              link.classList.add('text-gray-400', 'hover:text-[#ffffff]', 'transition-colors');
+            }
+          });
+        })();
+      </script>
 
-<script>
-  const currentPath = window.location.pathname;
-
-  document.querySelectorAll('a').forEach(link => {
-    const href = link.getAttribute('href');
-
-    // Normalize both paths for comparison
-    const linkPath = new URL(href, window.location.origin).pathname;
-
-    if (currentPath.endsWith(linkPath)) {
-      link.classList.remove('text-secondary');
-      link.classList.add(
-        'text-[#ffffff]',
-        'font-semibold',
-        'underline',
-        'decoration-2',
-        'decoration-[#ffffff]'
-      );
-    } else {
-      link.classList.add('text-gray-400', 'hover:text-[#ffffff]', 'transition-colors');
-    }
-  });
-</script>
-
-
-      </div>
-      <div
+      <a
         class="bg-secondary rounded-[50px] pt-[9px] pr-6 pb-[9px] pl-6 flex flex-row gap-1 items-center justify-start absolute right-[60px] top-6"
+        href="../Inquiry/index.html"
       >
         <div
           class="flex flex-row gap-1 items-center justify-start shrink-0 relative"
@@ -418,7 +425,7 @@
             src="formkit-arrowright0.svg"
           />
         </div>
-      </div>
+      </a>
     </div>
   </div>
   
